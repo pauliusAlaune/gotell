@@ -1,0 +1,483 @@
+@mixin responsive($pixels){
+	@media screen and (max-width:$pixels){
+		@content;
+	}
+}
+
+
+//#dark-blue-grey
+//#1f2a4b
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Playfair Display', serif;
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+    width: 32.291%;
+    height: 63.399%;
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 10;
+    @include responsive(1024px)
+    {
+        width: 100%;
+        height: 32.031%;
+    }
+    @include responsive(767px)
+    {
+        height: 125px;
+    }
+    .headerHolder {
+        width: 100%;
+        height: 100%;
+        padding-left: 22.365%;
+        padding-top: 40px;
+        padding-right: 13.333%;
+        padding-bottom: 40px;
+        @include responsive(1024px)
+        {
+            padding-left: 48px;
+            padding-right: 47px;
+        }
+        .topHolder {
+            display: flex;
+            justify-content: space-between;
+            .menuToggle {
+                .nav-icon {
+                    display: block;
+                    width: 32px;
+                    height: 22px;
+                    position: absolute;
+                    -webkit-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -o-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                    -webkit-transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+                    -o-transition: all .5s ease-in-out;
+                    transition: all .5s ease-in-out;
+                    cursor: pointer;
+                    z-index: 50;
+                }
+                .nav-icon.open {
+                    width: 21px;
+                    height: 22px;
+                }
+                .nav-icon span {
+                    background-color: #1f2a4b;
+                    height: 2px;
+                    width: 100%;
+                    position: absolute;
+                    transition: all 0.4s ease;
+                }
+                .nav-icon span:nth-child(1) {
+                    top: 0px;
+                    -webkit-transform-origin: left center;
+                    -moz-transform-origin: left center;
+                    -o-transform-origin: left center;
+                    transform-origin: left center;
+                }
+                .nav-icon span:nth-child(2) {
+                    top: 8px;
+                    -webkit-transform-origin: left center;
+                    -moz-transform-origin: left center;
+                    -o-transform-origin: left center;
+                    transform-origin: left center;
+                }
+                .nav-icon span:nth-child(3) {
+                    top: 16px;
+                    -webkit-transform-origin: left center;
+                    -moz-transform-origin: left center;
+                    -o-transform-origin: left center;
+                    transform-origin: left center;
+                }
+                .nav-icon.open span:nth-child(1) {
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    top: 0px;
+                    left: 0px;
+                    background: #1f2a4b;
+                    width: 28px;
+                }
+                .nav-icon.open span:nth-child(2) {
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    top: 19px;
+                    left: 0px;
+                    background: #1f2a4b;
+                    width: 27px;
+                }
+                .nav-icon.open span:nth-child(3) {
+                    width: 0%;
+                    opacity: 0;
+                    background: #1f2a4b;
+                }
+            }
+            .langMenu {
+                text-align: center;
+                margin: 0px 0px 14px 10px;
+                @include responsive(767px)
+                {
+                    display: none;
+                }
+                .lang_menuList {
+                    @include responsive(767px)
+                    {
+                        margin-left: 5px;
+                    }
+                    .lang_menuListItem {
+                        font-size: 12px;
+                        font-size: 14px;
+                        font-weight: 300;
+                        line-height: 1.4;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: normal;
+                        letter-spacing: 0.4px;
+                        text-align: center;
+                        display: inline;
+                        color: #8F806E;
+                        margin-right: 11px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        &:hover {
+                           color: #1f2a4b; 
+                        }
+                    }
+                    .lang_menuListItem.active {
+                       color: #1f2a4b;
+                        border-bottom: 1px solid #1f2a4b; 
+                    }
+                }
+            }
+            .logoBlockMob {
+                display: none;
+                @include responsive(767px)
+                {
+                    display: block;
+                }
+            }
+        }
+        .bottomHolder {
+            padding-top: 95px;
+            display: flex;
+            flex-direction: column;
+            height: 90%;
+            @include responsive(767px)
+            {
+                display: none;
+            }
+            @include responsive(1024px)
+            {
+                margin-left: 82px;
+                margin-right: 82px;
+                padding-top: 68px;
+                flex-direction: row;
+            }
+            .logoBlock {
+                .logo {
+                    
+                }
+            }
+            .textBlock {
+                position: relative;
+                margin-top: auto;
+                @include responsive(1024px)
+                {
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    margin-left: 81px;
+                }
+                .textPara {
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.43;
+                    letter-spacing: 0.3px;
+                    color: #1f2a4b;
+                }
+            }
+        }
+    }
+    .navWrapper {
+        width: 32.291%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        min-height: 100%;
+        height: 100vh;
+        padding-top: 13%;
+//        display: flex;
+        transform: translateX(-100%);
+        transition: ease 1s;
+        @include responsive(1024px)
+        {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            padding-top: 40px;
+        }
+        @include responsive(767px)
+        {
+            width: 100%;
+        }
+        @include responsive(767px)
+        {
+            position: fixed;
+            padding: 100px 5%;
+        }
+        .navHolder {
+            width: 100%;
+            height: 100%;
+            padding-left: 22.365%;
+            padding-right: 13.333%;
+            padding-bottom: 40px;
+            position: relative;
+            @include responsive(1024px)
+            {
+                display: flex;
+                padding-left: 130px;
+                padding-right: 59px;
+                padding-bottom: 59px;
+            }
+            .navBlock {
+    //            display: none;
+                width: 100%;
+                @include responsive(1024px)
+                {
+                    width: 70%;
+                }
+                @include responsive(767px)
+                {
+                    width: 100%;
+                }
+                .navBlockItem {
+                    font-size: 21px;
+                    font-weight: 300;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    letter-spacing: 0.3px;
+                    color: #1f2a4b;
+                    position: relative;
+                    width: 100%;
+                    padding-left: 0px;
+                    margin-bottom: 25px;
+                }
+                .navBlockItem.active {
+                    font-size: 30px;
+                    font-weight: 500;
+                    font-size: 21px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    letter-spacing: 0.3px;
+                    color: #1f2a4b;
+                }
+                .specialNavBlockItem {
+                    margin-top: 45px;
+                }
+            }
+            .navBlock2 {
+                @include responsive(1024px)
+                {
+                    width: 30%;
+                }
+                .socialLink {
+                    display: flex;
+                    align-content: center;
+                    margin-top: 74px;
+                    img {
+                        margin-right: 11px;
+                    }
+                    span {
+                        font-size: 16px;
+                        font-weight: 300;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1;
+                        letter-spacing: 0.3px;
+                        color: #1f2a4b;
+                        align-items: center;
+                        display: flex;
+                    }
+                }
+                .navLangMenu {
+                    margin-top: 24px;
+                    .navLangMenuUl {
+                        display: flex;
+                        .navLangMenu_item {
+                            width: 30px;
+                            height: 30px;
+                            background-color: #ececec;
+                            color: #1f2a4b;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            margin-right: 10px;
+                            &:hover {
+                                background-color: #1f2a4b;
+                                color: #fff;
+                            }
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                            .navLangMenu_itemLink {
+                                font-size: 14px;
+                                font-weight: 300;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: 1;
+                                letter-spacing: 0.2px;
+                            }
+                        }
+                        .navLangMenu_item.active {
+                            background-color: #1f2a4b;
+                            color: #fff;
+                        }
+                    }
+                }
+                .navBottom {
+                    position: absolute;
+                    bottom: 30px;
+                    .navBottom_para {
+                        font-size: 14px;
+                        font-weight: 300;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.5;
+                        letter-spacing: 0.2px;
+                        color: #1f2a4b;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.holder {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: baseline;
+//    .block1 {
+//        width: 32.291%;
+//        height: 63.399%;
+//        background-color: #ff0055;
+//        position: fixed;
+//        @include responsive(1024px)
+//        {
+//            width: 100%;
+//            height: 32.031%;
+//            position: relative;
+//        }
+//        
+//    }
+    .block2 {
+        width: 67.709%;
+        height: 100%;
+        background-color: #5500FF;
+        order: 2;
+        display: flex;
+        right: 0;
+        position: relative;
+        @include responsive(1024px)
+        {
+            width: 100%;
+            height: 40.820%;
+            background-color: #5500FF;
+            order: 1;
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+        .block2-1 {
+            width: 100%;
+            height: 81.699%;
+            background-color: rgba(255, 255, 255, 0.5);
+            @include responsive(1024px)
+            {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .block2-2 {
+            width: 50%;
+            height: 36.601%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            @include responsive(1024px)
+            {
+                position: fixed;
+                height: 27.149%;
+                right: 0;
+                bottom: 0;
+                left: unset;
+            }
+            .block2-2-1 {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                .block2-2-1-1 {
+                    width: 100%;
+                    height: 50%;
+                    background-color: rgba(255, 0, 0, 0.5);
+                    .test {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        padding: 20px 40px;
+                    }
+                }
+                .block2-2-1-2 {
+                    width: 100%;
+                    height: 50%;
+                    background-color: rgba(255, 0, 150, 0.5);
+                }
+            }
+        }
+        .block2-3 {
+            width: 50%;
+            height: 18.301%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(200, 250, 10, 0.9);
+            @include responsive(1024px)
+            {
+                display: none;
+            }
+        }
+    }
+    .block3 {
+        width: 32.291%;
+        height: 36.601%;
+        background-color: #552299;
+        order: 1;
+        margin-top: auto;
+        @include responsive(1024px)
+        {
+            width: 50%;
+            height: 27.149%;
+            order: 2;
+            margin-top: 0;
+        }
+    }
+}
