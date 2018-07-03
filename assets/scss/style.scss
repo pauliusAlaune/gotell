@@ -26,7 +26,8 @@ body {
     }
     @include responsive(767px)
     {
-        height: 125px;
+        height: auto;
+        background-color: transparent;
     }
     .headerHolder {
         width: 100%;
@@ -39,6 +40,12 @@ body {
         {
             padding-left: 48px;
             padding-right: 47px;
+        }
+        @include responsive(767px)
+        {
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-top: 21px;
         }
         .topHolder {
             display: flex;
@@ -169,16 +176,18 @@ body {
             display: flex;
             flex-direction: column;
             height: 90%;
-            @include responsive(767px)
-            {
-                display: none;
-            }
             @include responsive(1024px)
             {
                 margin-left: 82px;
                 margin-right: 82px;
                 padding-top: 68px;
                 flex-direction: row;
+            }
+            @include responsive(767px)
+            {
+                margin-left: 0;
+                margin-right: 0;
+                padding-top: 50px;
             }
             .logoBlock {
                 .logo {
@@ -193,6 +202,10 @@ body {
                     margin-top: auto;
                     margin-bottom: auto;
                     margin-left: 81px;
+                }
+                @include responsive(767px)
+                {
+                    display: none;
                 }
                 .textPara {
                     font-size: 14px;
@@ -232,7 +245,7 @@ body {
         @include responsive(767px)
         {
             position: fixed;
-            padding: 100px 5%;
+            padding: 100px 0% 0;
         }
         .navHolder {
             width: 100%;
@@ -245,6 +258,13 @@ body {
             {
                 display: flex;
                 padding-left: 130px;
+                padding-right: 59px;
+                padding-bottom: 59px;
+            }
+            @include responsive(767px)
+            {
+                flex-direction: column;
+                padding-left: 51px;
                 padding-right: 59px;
                 padding-bottom: 59px;
             }
@@ -271,6 +291,10 @@ body {
                     width: 100%;
                     padding-left: 0px;
                     margin-bottom: 25px;
+                    @include responsive(767px)
+                    {
+                        font-size: 18px;
+                    }
                 }
                 .navBlockItem.active {
                     font-size: 30px;
@@ -282,6 +306,10 @@ body {
                     line-height: 1;
                     letter-spacing: 0.3px;
                     color: #1f2a4b;
+                    @include responsive(767px)
+                    {
+                        font-size: 18px;
+                    }
                 }
                 .specialNavBlockItem {
                     margin-top: 45px;
@@ -292,10 +320,18 @@ body {
                 {
                     width: 30%;
                 }
+                @include responsive(767px)
+                {
+                    width: 100%;
+                }
                 .socialLink {
                     display: flex;
                     align-content: center;
                     margin-top: 74px;
+                    @include responsive(767px)
+                    {
+                        margin-top: 45px;
+                    }
                     img {
                         margin-right: 11px;
                     }
