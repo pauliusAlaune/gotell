@@ -1,14 +1,7 @@
-@mixin responsive($pixels){
-	@media screen and (max-width:$pixels){
-		@content;
-	}
-}
+@import 'variables';
+@import 'mixins';
 
 
-//#dark-blue-grey
-//#1f2a4b
-//font-family: 'Open Sans', sans-serif;
-//font-family: 'Playfair Display', serif;
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -402,28 +395,15 @@ body {
     }
 }
 
-
-.holder {
+//    INDEX HOLDER
+.pageHolder {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: baseline;
-//    .block1 {
-//        width: 32.291%;
-//        height: 63.399%;
-//        background-color: #ff0055;
-//        position: fixed;
-//        @include responsive(1024px)
-//        {
-//            width: 100%;
-//            height: 32.031%;
-//            position: relative;
-//        }
-//        
-//    }
-    .block2 {
+    &__mainBlock {
         width: 67.709%;
         height: 100%;
         background-color: #5500FF;
@@ -442,17 +422,34 @@ body {
             flex-wrap: wrap;
             margin-top: auto;
         }
-        .block2-1 {
+        &__imgHolder {
             width: 100%;
             height: 81.699%;
+            overflow-x: hidden;
             background-color: rgba(255, 255, 255, 0.5);
             @include responsive(1024px)
             {
                 width: 100%;
                 height: 100%;
             }
+            &__wrapper {
+                width: 200%;
+                height: 100%;
+                display: flex;
+                transform: translateX(0%);
+                animation: slide 5s cubic-bezier(0, 0, 0, 1) infinite;
+                &--imgBlock {
+                    width: 100%;
+                    height: auto;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
         }
-        .block2-2 {
+        &__chooseStyle {
             width: 50%;
             height: 36.601%;
             position: absolute;
@@ -466,54 +463,294 @@ body {
                 bottom: 0;
                 left: unset;
             }
-            .block2-2-1 {
+            &__holder {
                 width: 100%;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                .block2-2-1-1 {
+                &__block {
                     width: 100%;
                     height: 50%;
                     background-color: rgba(255, 0, 0, 0.5);
-                    .test {
-                        position: relative;
-                        width: 100%;
+                    .modernRoomBtn {
+                        background-color: $lightGray;
                         height: 100%;
-                        padding: 20px 40px;
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        position: relative;
+                        transition: all 0.3s ease;
+                        z-index: 10;
+                        &--bg {
+                            background-color: $wheat;
+                            z-index: 15;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            transition: all 0.5s ease-out;
+                        }
+                        &--fourStars {
+                            position: absolute;
+                            top: 15px;
+                            right: 15px;
+                            background-image: url(../images/4stars.svg);
+                            width: 21px;
+                            height: 23px;
+                            z-index: 20;
+                            opacity: 0;
+                            transform: translateY(-15px);
+                            transition: all 0.4s ease;
+                        }
+                        &--nameStyle {
+                            font-family: $mainFont;
+                            font-size: 24px;
+                            font-weight: 600;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: normal;
+                            letter-spacing: 0.4px;
+                            text-align: center;
+                            color: $blu;
+                            margin-bottom: 15px;
+                            z-index: 20;
+                            opacity: 1;
+                            transition: all 0.3s ease;
+                        }
+                        &--viewStyle {
+                            font-family: $mainFont;
+                            font-size: 14px;
+                            font-weight: normal;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1;
+                            letter-spacing: 0.5px;
+                            color: $blu;
+                            z-index: 20;
+                            display: flex;
+                            justify-content: center;
+                            opacity: 1;
+                            transition: all 0.3s ease;
+                            &--img {
+                                padding-left: 20px;
+                            }
+                        }
                     }
-                }
-                .block2-2-1-2 {
-                    width: 100%;
-                    height: 50%;
-                    background-color: rgba(255, 0, 150, 0.5);
+                    
+                    .classicRoomBtn {
+                        background-color: $lightGray;
+                        height: 100%;
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        position: relative;
+                        z-index: 10;
+                        opacity: 1;
+                        transition: all 0.3s ease;
+                        &--bg {
+                            background-color: $blu;
+                            z-index: 15;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            transition: all 0.5s ease-out;
+                        }
+                        &--fourStars {
+                            position: absolute;
+                            top: 15px;
+                            right: 15px;
+                            background-image: url(../images/4stars.svg);
+                            width: 21px;
+                            height: 23px;
+                            z-index: 20;
+                            opacity: 0;
+                            transform: translateY(-15px);
+                            transition: all 0.4s ease;
+                        }
+                        &--nameStyle {
+                            font-family: $classicFont;
+                            font-size: 24px;
+                            font-weight: 600;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: normal;
+                            letter-spacing: 0.4px;
+                            text-align: center;
+                            color: $wheat;
+                            z-index: 20;
+                            margin-bottom: 15px;
+                            opacity: 1;
+                            transition: all 0.3s ease;
+                        }
+                        &--viewStyle {
+                            font-family: $mainFont;
+                            font-size: 14px;
+                            font-weight: normal;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1;
+                            letter-spacing: 0.5px;
+                            color: $wheat;
+                            display: flex;
+                            justify-content: center;
+                            z-index: 20;
+                            opacity: 1;
+                            transition: all 0.3s ease;
+                            &--img {
+                                padding-left: 20px;
+                            }
+                        }
+                    }
+                    .modernRoomBtn.notActive,
+                    .classicRoomBtn.notActive {
+                        background-color: $lightGray;
+                        .modernRoomBtn--bg,
+                        .classicRoomBtn--bg {
+                            height: 0%;
+                        }
+                        .modernRoomBtn--nameStyle,
+                        .classicRoomBtn--nameStyle {
+                            opacity: 0.3;
+                            color: $blu;
+                        }
+                        .modernRoomBtn--viewStyle,
+                        .classicRoomBtn--viewStyle {
+                            opacity: 0.3;
+                            color: $blu;
+                        }
+                    }
+                    .modernRoomBtn.active,
+                    .classicRoomBtn.active {
+                        .modernRoomBtn--bg,
+                        .classicRoomBtn--bg {
+                            height: 100%;
+                        }
+                        .modernRoomBtn--fourStars,
+                        .classicRoomBtn--fourStars {
+                            opacity: 1;
+                            transform: translateY(0px);
+                        }
+                    }
                 }
             }
         }
-        .block2-3 {
+        &__bookRoom {
             width: 50%;
             height: 18.301%;
             position: absolute;
             right: 0;
             bottom: 0;
-            background-color: rgba(200, 250, 10, 0.9);
+            background-color: #fff;
             @include responsive(1024px)
             {
                 display: none;
             }
+            &__holder {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .para {
+                    margin-bottom: 21px;
+                    font-family: $mainFont;
+                    font-size: 14px;
+                    font-weight: 300;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: 0.3px;
+                    text-align: center;
+                    color: $blu;
+                }
+                .bookRoomBtn {
+                    width: 227px;
+                    height: 40px;
+                    &__link {
+                        font-family: $mainFont;
+                        font-size: 14px;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1;
+                        letter-spacing: 0.5px;
+                        color: #ffffff;
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $blu;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 8px 30px;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+        &__miniImgHolder {
+            width: 32.291%;
+            height: 36.601%;
+            background-color: #552299;
+            order: 1;
+            margin-top: auto;
+            z-index: -1;
+            overflow: hidden;
+            @include responsive(1024px)
+            {
+                width: 50%;
+                height: 27.149%;
+                order: 2;
+                margin-top: 0;
+            }
+            &__wrapper {
+                width: 200%;
+                height: 100%;
+                display: flex;
+                transform: translateX(0%);
+                animation: slideMini 5s cubic-bezier(0, 0, 0, 1) infinite;
+                &--block {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
         }
     }
-    .block3 {
-        width: 32.291%;
-        height: 36.601%;
-        background-color: #552299;
-        order: 1;
-        margin-top: auto;
-        @include responsive(1024px)
-        {
-            width: 50%;
-            height: 27.149%;
-            order: 2;
-            margin-top: 0;
-        }
+}
+
+@keyframes slide {
+    0%,100% {
+        transform: translateX(0%);
     }
+    25% {
+        transform: translateX(0%);        
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    75% {
+        transform: translateX(-50%);
+    }       
+}
+@keyframes slideMini {
+    0%,100% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(0%);        
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    75% {
+        transform: translateX(-50%);
+    }       
 }
