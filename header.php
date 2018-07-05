@@ -33,14 +33,16 @@
                 </div>
                 <div class="logoBlockMob">
                     <a href="#" class="logo">
-                        <img src="assets/images/Gotell_Hotel_logo_smaller.svg">
+                        <img id="" src="assets/images/Gotell_Hotel_logo_smaller.svg">
                     </a>
                 </div>
             </div>
             <div class="bottomHolder">
                 <div class="logoBlock">
                     <a href="#" class="logo">
-                        <img src="assets/images/logo.svg">
+                        <img id="normal" class="logoImg active" src="assets/images/logo.svg">
+                        <img id="modernLogo" class="logoImg" src="assets/images/logo_light.svg">
+                        <img id="classicLogo" class="logoImg" src="assets/images/logo_dark.svg">
                     </a>
                 </div>
                 <div class="textBlock">

@@ -10,8 +10,9 @@ body {
     width: 32.291%;
     height: 63.399%;
     background-color: #ffffff;
-    position: fixed;
+    position: absolute;
     z-index: 10;
+    transition: background-color 0.6s ease;
     @include responsive(1024px)
     {
         width: 100%;
@@ -184,7 +185,12 @@ body {
             }
             .logoBlock {
                 .logo {
-                    
+                    .logoImg {
+                        display: none;
+                    }
+                    .logoImg.active {
+                        display: block;
+                    }
                 }
             }
             .textBlock {
@@ -394,6 +400,51 @@ body {
         }
     }
 }
+.header.wheat {
+    background-color: $wheat;
+    transition: background-color 0.6s ease;
+}
+.header.blu {
+    background-color: $blu;
+    transition: background-color 0.6s ease;
+    .headerHolder {
+        .topHolder {
+            .menuToggle {
+                .nav-icon {
+                    span {
+                        background-color: #fff;
+                        transition: all 0.3s ease;
+                    }
+                }
+                .nav-icon.open {
+                    span {
+                        background-color: #1f2a4b;
+                    }
+                }
+            }
+            .langMenu {
+                .lang_menuList {
+                    .lang_menuListItem {
+                        color: #fff;
+                        opacity: 0.5;
+                    }
+                    .lang_menuListItem.active {
+                        color: #fff;
+                        border-bottom: 1px solid #fff;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .bottomHolder {
+            .textBlock {
+                .textPara {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
 
 //    INDEX HOLDER
 .pageHolder {
@@ -406,7 +457,7 @@ body {
     &__mainBlock {
         width: 67.709%;
         height: 100%;
-        background-color: #5500FF;
+        background-color: #fff;
         order: 2;
         display: flex;
         right: 0;
@@ -415,7 +466,7 @@ body {
         {
             width: 100%;
             height: 40.820%;
-            background-color: #5500FF;
+            background-color: #fff;
             order: 1;
             display: flex;
             position: relative;
@@ -427,26 +478,47 @@ body {
             height: 81.699%;
             overflow-x: hidden;
             background-color: rgba(255, 255, 255, 0.5);
+            position: relative;
             @include responsive(1024px)
             {
                 width: 100%;
                 height: 100%;
             }
             &__wrapper {
+//                display: none;
                 width: 200%;
                 height: 100%;
                 display: flex;
                 transform: translateX(0%);
+                position: absolute;
+                opacity: 0;
+                filter: blur(20px) grayscale(80%);
                 animation: slide 5s cubic-bezier(0, 0, 0, 1) infinite;
+                transition: all 0.7s cubic-bezier(0, 0, 0, 1);
                 &--imgBlock {
                     width: 100%;
                     height: auto;
                     overflow: hidden;
+                    @include responsive(1500px)
+                    {
+                        width: auto;
+                        height: 100%;
+                    }
                     img {
                         width: 100%;
                         height: auto;
+                        @include responsive(1500px)
+                        {
+                            width: auto;
+                            height: 100%;
+                        }
                     }
                 }
+            }
+            &__wrapper.active {
+                display: flex;
+                opacity: 1;
+                filter: blur(0px) grayscale(0%);
             }
         }
         &__chooseStyle {
@@ -501,7 +573,7 @@ body {
                             z-index: 20;
                             opacity: 0;
                             transform: translateY(-15px);
-                            transition: all 0.4s ease;
+                            transition: all 0.4s ease 0.5s;
                         }
                         &--nameStyle {
                             font-family: $mainFont;
@@ -518,6 +590,26 @@ body {
                             opacity: 1;
                             transition: all 0.3s ease;
                         }
+                        &--viewStylePara {
+                            font-family: $mainFont;
+                            font-size: 14px;
+                            font-weight: normal;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1;
+                            letter-spacing: 0.5px;
+                            color: $blu;
+                            justify-content: center;
+                            display: flex;
+                            z-index: 20;
+                            opacity: 1;
+                            transform: translateY(0px);
+                            transition: all 0.3s ease;
+                            position: absolute;
+                            left: 0;
+                            margin-top: 20px;
+                            right: 0;
+                        }
                         &--viewStyle {
                             font-family: $mainFont;
                             font-size: 14px;
@@ -530,7 +622,8 @@ body {
                             z-index: 20;
                             display: flex;
                             justify-content: center;
-                            opacity: 1;
+                            opacity: 0;
+                            transform: translateY(-20px);
                             transition: all 0.3s ease;
                             &--img {
                                 padding-left: 20px;
@@ -546,8 +639,8 @@ body {
                         flex-direction: column;
                         justify-content: center;
                         position: relative;
+                        overflow: hidden;
                         z-index: 10;
-                        opacity: 1;
                         transition: all 0.3s ease;
                         &--bg {
                             background-color: $blu;
@@ -568,7 +661,7 @@ body {
                             z-index: 20;
                             opacity: 0;
                             transform: translateY(-15px);
-                            transition: all 0.4s ease;
+                            transition: all 0.4s ease 0.5s;
                         }
                         &--nameStyle {
                             font-family: $classicFont;
@@ -585,6 +678,26 @@ body {
                             opacity: 1;
                             transition: all 0.3s ease;
                         }
+                        &--viewStylePara {
+                            font-family: $mainFont;
+                            font-size: 14px;
+                            font-weight: normal;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1;
+                            letter-spacing: 0.5px;
+                            color: $wheat;
+                            justify-content: center;
+                            display: flex;
+                            z-index: 20;
+                            opacity: 1;
+                            transform: translateY(0px);
+                            transition: all 0.3s ease;
+                            position: absolute;
+                            left: 0;
+                            margin-top: 20px;
+                            right: 0;
+                        }
                         &--viewStyle {
                             font-family: $mainFont;
                             font-size: 14px;
@@ -597,7 +710,8 @@ body {
                             display: flex;
                             justify-content: center;
                             z-index: 20;
-                            opacity: 1;
+                            opacity: 0;
+                            transform: translateY(20px);
                             transition: all 0.3s ease;
                             &--img {
                                 padding-left: 20px;
@@ -607,8 +721,7 @@ body {
                     .modernRoomBtn.notActive,
                     .classicRoomBtn.notActive {
                         background-color: $lightGray;
-                        .modernRoomBtn--bg,
-                        .classicRoomBtn--bg {
+                        .modernRoomBtn--bg {
                             height: 0%;
                         }
                         .modernRoomBtn--nameStyle,
@@ -616,22 +729,58 @@ body {
                             opacity: 0.3;
                             color: $blu;
                         }
-                        .modernRoomBtn--viewStyle,
-                        .classicRoomBtn--viewStyle {
+                        .modernRoomBtn--viewStylePara {
                             opacity: 0.3;
                             color: $blu;
+                            transform: translateY(0px);
+                        }
+                        .classicRoomBtn--viewStylePara {
+                            opacity: 0.3;
+                            color: $blu;
+                            transform: translateY(0px);
+                        }
+                        .modernRoomBtn--viewStyle,
+                        .classicRoomBtn--viewStyle {
+                            opacity: 0;
+                            color: $blu;
+                        }
+                    }
+                    .classicRoomBtn.notActive {
+                        background-color: $lightGray;
+                        .classicRoomBtn--bg {
+                            transform: translateY(100%);
                         }
                     }
                     .modernRoomBtn.active,
                     .classicRoomBtn.active {
-                        .modernRoomBtn--bg,
-                        .classicRoomBtn--bg {
+                        .modernRoomBtn--bg {
                             height: 100%;
                         }
                         .modernRoomBtn--fourStars,
                         .classicRoomBtn--fourStars {
                             opacity: 1;
                             transform: translateY(0px);
+                        }
+                        .modernRoomBtn--viewStyle {
+                            opacity: 1;
+                            transform: translateY(0px);
+                        }
+                        .classicRoomBtn--viewStyle {
+                            opacity: 1;
+                            transform: translateY(0px);
+                        }
+                        .modernRoomBtn--viewStylePara {
+                            opacity: 0;
+                            transform: translateY(-20px);
+                        }
+                        .classicRoomBtn--viewStylePara {
+                            opacity: 0;
+                            transform: translateY(20px);
+                        }
+                    }
+                    .classicRoomBtn.active {
+                        .classicRoomBtn--bg {
+                            transform: translateY(0%);
                         }
                     }
                 }
@@ -687,6 +836,24 @@ body {
                         align-items: center;
                         padding: 8px 30px;
                         border-radius: 20px;
+                        &--icon {
+                            display: block;
+                        }
+                        &--iconDark {
+                            display: none;
+                        }
+                    }
+                }
+                .bookRoomBtn.wheat {
+                    .bookRoomBtn__link {
+                        color: $blu;
+                        background-color: $wheat;
+                        .bookRoomBtn__link--icon {
+                            display: none;
+                        }
+                        .bookRoomBtn__link--iconDark {
+                            display: block;
+                        }
                     }
                 }
             }
@@ -694,11 +861,12 @@ body {
         &__miniImgHolder {
             width: 32.291%;
             height: 36.601%;
-            background-color: #552299;
+            background-color: #fff;
             order: 1;
             margin-top: auto;
             z-index: -1;
             overflow: hidden;
+            position: relative;
             @include responsive(1024px)
             {
                 width: 50%;
@@ -710,8 +878,12 @@ body {
                 width: 200%;
                 height: 100%;
                 display: flex;
+                position: absolute;
                 transform: translateX(0%);
                 animation: slideMini 5s cubic-bezier(0, 0, 0, 1) infinite;
+                opacity: 0;
+                filter: blur(20px) grayscale(80%);
+                transition: all 0.7s cubic-bezier(0, 0, 0, 1);
                 &--block {
                     width: 100%;
                     height: 100%;
@@ -722,9 +894,214 @@ body {
                     }
                 }
             }
+            &__wrapper.active {
+                opacity: 1;
+                filter: blur(0px) grayscale(0%);
+            }
         }
     }
 }
+
+// ABOUT US
+.aboutSection {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &__imgHolder {
+        width: 100%;
+        height: 63.399%;
+        padding-left: 32.291%;
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: 100%;;
+            @include responsive(1530px)
+            {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+    &__holder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        &__leftBlock {
+            width: 32.291%;
+            &--imgBlock {
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &__rightBlock {
+            width: 67.709%;
+            &--textBlock {
+                width: 100%;
+                padding: 45px 9.375% 0 8.333%;
+                .title {
+                    font-family: $mainFont;
+                    font-size: 32px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 0.75;
+                    letter-spacing: 0.3px;
+                    color: $blu;
+                    margin-bottom: 50px;
+                }
+                .innerTextBlock {
+                    width: 100%;
+                    margin-bottom: 45px;
+                    .miniTitle {
+                        font-family: $mainFont;
+                        font-size: 24px;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1;
+                        letter-spacing: 0.3px;
+                        color: $blu;
+                        margin-bottom: 15px;
+                    }
+                    .para {
+                        font-family: $mainFont;
+                        font-size: 14px;
+                        font-weight: 300;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.43;
+                        letter-spacing: 0.3px;
+                        color: $blu;
+                        margin-bottom: 25px;
+                    }
+                }
+                .innerLocationBlock {
+                    width: 100%;
+                    margin-top: 90px;
+                    margin-bottom: 80px;
+                    .miniTitle {
+                        font-family: $mainFont;
+                        font-size: 24px;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1;
+                        letter-spacing: 0.3px;
+                        color: $blu;
+                        margin-bottom: 33px;
+                    }
+                    .locationHolder {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding-right: 10%;
+                        &__block {
+                            width: 50%;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 20px;
+                            &--img {
+                                margin-right: 22px;
+                            }
+                            &--name {
+                                font-family: $mainFont;
+                                font-size: 14px;
+                                font-weight: 300;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: 1.43;
+                                letter-spacing: 0.3px;
+                                color: #1f2a4b;
+                            }
+                        }
+                    }
+                }
+                .innerReviewsBlock {
+                    width: 100%;
+                    .miniTitle {
+                        font-family: $mainFont;
+                        font-size: 24px;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1;
+                        letter-spacing: 0.3px;
+                        color: #1f2a4b;
+                        margin-bottom: 44px
+                    }
+                    .reviewsHolder {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        &__block {
+                            width: 100%;
+                            display: flex;
+                            padding-bottom: 26px;
+                            border-bottom: 1px solid #ececec;
+                            margin-bottom: 26px;
+                            &__leftBlock {
+                                width: 20.862%;
+                                padding-right: 29px;
+                                .name {
+                                    font-family: $mainFont;
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    line-height: 1.29;
+                                    letter-spacing: 0.3px;
+                                    color: $blu;
+                                    margin-bottom: 17px;
+                                }
+                                .date {
+                                    font-family: $mainFont;
+                                    font-size: 12px;
+                                    font-weight: 300;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    line-height: 1.17;
+                                    letter-spacing: 0.3px;
+                                    color: $blu;
+                                    margin-bottom: 15px;
+                                }
+                                .ratingHolder {
+                                    display: flex;
+                                    &__block {
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        background-size: cover;
+                                        width: 10px;
+                                        height: 10px;
+                                        margin-right: 2px;
+                                    }
+                                    .fullStar {
+                                        background-image: url('../images/star_blue.svg');
+                                    }
+                                    .halfStar {
+                                        background-image: url('../images/star_blue_half.svg');
+                                    }
+                                    .grayStar {
+                                        background-image: url('../images/star_grey.svg');
+                                    }
+                                }
+                            }
+                            &__rightBlock {
+                                width: 79.138%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 
 @keyframes slide {
     0%,100% {
