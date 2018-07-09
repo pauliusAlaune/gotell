@@ -55,8 +55,12 @@ $(document).ready(function() {
     let reviewsLastElement = document.querySelectorAll(".reviewsHolder");
     console.log(reviewsLastElement[reviewsLastElement.length -1]);
     
-    document.getElementById('loadMoreReviews').addEventListener('click', loadData);
-
+    
+    const loadMoreReviews = document.getElementById('loadMoreReviews');
+    if(loadMoreReviews){
+       loadMoreReviews.addEventListener('click', loadData);
+    }
+    
     function loadData(){
         const xhr = new XMLHttpRequest();
         xhr.open('POST', 'moreReviews.php', true);
@@ -78,6 +82,81 @@ $(document).ready(function() {
         }
 
         xhr.send();
+    }
+    
+    const gotellContactForm = document.getElementById('gotellContactForm');
+    if (gotellContactForm) {
+        gotellContactForm.addEventListener('submit', function(e){        
+            if( !(validateEmail()) || !(validateName()) || !(validateInquiry()) || !(validatePhone()) ){
+                validateName();
+                validateInquiry();
+                validateEmail();
+                validatePhone();
+                e.preventDefault();
+            } else {
+                console.log('fin');
+            }        
+        });
+    }
+    
+    
+    // form blur event listeners
+    document.getElementById('name').addEventListener('blur', validateName);
+    document.getElementById('inquiry').addEventListener('blur', validateInquiry);
+    document.getElementById('email').addEventListener('blur', validateEmail);
+    document.getElementById('phone').addEventListener('blur', validatePhone);
+
+    function validateName(){
+        const name = document.getElementById('name');
+        const re = /^[a-zA-Z]{2,12}$/;
+        let validName = true;
+        if(!re.test(name.value)){
+            name.parentElement.classList.add('is-invalid');
+            validName = false;
+        } else {
+           name.parentElement.classList.remove('is-invalid');
+        }
+        return validName;
+    }    
+
+    function validateInquiry(){
+        const inquiry = document.getElementById('inquiry');
+        const re = /^[a-zA-Z]{2,12}$/;
+        let validInquiry = true;
+        if(!re.test(inquiry.value)){
+            inquiry.parentElement.classList.add('is-invalid');
+            validInquiry = false;
+        } else {
+           inquiry.parentElement.classList.remove('is-invalid');
+        }
+        return validInquiry;
+    }
+
+
+    function validateEmail(){
+        const email = document.getElementById('email');
+        const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+).([a-zA-Z]{2,5})$/;
+        let validEmail = true;
+        if(!re.test(email.value)){
+            email.parentElement.classList.add('is-invalid');
+            validEmail = false;
+        } else {
+           email.parentElement.classList.remove('is-invalid');
+        }
+        return validEmail;
+    }
+
+    function validatePhone(){
+        const phone = document.getElementById('phone');
+        const re = /^(?:\+\d{2})?\d{10}(?:,(?:\+\d{2})?\d{10})*$/;
+        let validPhone = true;
+        if(!re.test(phone.value)){
+            phone.parentElement.classList.add('is-invalid');
+            validPhone = false;
+        } else {
+           phone.parentElement.classList.remove('is-invalid');
+        }
+        return validPhone;
     }
     
 });
