@@ -52,4 +52,32 @@ $(document).ready(function() {
         $(classicMiniImg).addClass('active');
     });
     
+    let reviewsLastElement = document.querySelectorAll(".reviewsHolder");
+    console.log(reviewsLastElement[reviewsLastElement.length -1]);
+    
+    document.getElementById('loadMoreReviews').addEventListener('click', loadData);
+
+    function loadData(){
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'moreReviews.php', true);
+
+        console.log('READYSTATE', xhr.readyState);
+
+        xhr.onprogress = function(){
+            console.log('READYSTATE', xhr.readyState)
+        }
+
+        xhr.onload = function(){
+            if(this.status === 200){
+               console.log(this.responseText);
+               $("#loadMoreHolder").before(this.responseText);
+            }
+        }
+        xhr.onerror = function(){
+            console.log('request error..')
+        }
+
+        xhr.send();
+    }
+    
 });

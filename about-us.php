@@ -76,9 +76,33 @@
                             </div>
                             <div class="reviewsHolder__block__rightBlock">
                                 <p class="title">A lovely room</p>
+                                <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                             </div>
                         </div>
                     </div>
+                    <div class="reviewsHolder">
+                        <div class="reviewsHolder__block">
+                            <div class="reviewsHolder__block__leftBlock">
+                                <p class="name">MELINDA KERRY JOHNSON</p>
+                                <p class="date">28/04/2017</p>
+                                <div class="ratingHolder">
+                                    <div class="ratingHolder__block fullStar"></div>
+                                    <div class="ratingHolder__block fullStar"></div>
+                                    <div class="ratingHolder__block fullStar"></div>
+                                    <div class="ratingHolder__block fullStar"></div>
+                                    <div class="ratingHolder__block halfStar"></div>
+                                </div>
+                            </div>
+                            <div class="reviewsHolder__block__rightBlock">
+                                <p class="title">Had a great stay. Will definitely come back.</p>
+                                <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="loadMoreHolder" class="loadMoreHolder">
+                        <button id="loadMoreReviews" class="loadMore"><span class="words">Load more reviews</span><img src="assets/images/loadMore.svg"></button>
+                    </div>
+                    <div id="output"></div>
                 </div>
             </div>
         </div>
