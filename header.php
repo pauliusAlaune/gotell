@@ -5,11 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Playfair+Display:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/reset.css">	
-<!--
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="assets/css/owl.transitions.css">
--->
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<link rel="stylesheet" href="assets/css/slick-theme.css">
 	<link href="assets/css/style.css" rel="stylesheet" type="text/css">
 	<title>Gotell</title>
 </head>

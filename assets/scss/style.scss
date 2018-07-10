@@ -1319,7 +1319,347 @@ body {
     }
 }
 
-//
+//    ROOM INNER
+.roomInnerSection{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &__carouselWrapper {
+        width: 100%;
+        height: 63.399%;
+        padding-left: 34.375%;
+        padding-right: 7.291%;
+        overflow: hidden;
+        position: relative;
+        &__holder {
+            background-color: $blu;
+            height: 100%;
+            &__block {
+                width: 100%;
+                height: 100%;
+                max-height: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .slick-dots {
+                position: absolute;
+                top: 10px;
+                width: auto;
+                right: 20px;
+                li {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .carouselNav {
+        width: 200px;
+        height: 46px;
+        position: absolute;
+        bottom: 30.99%;
+        right: 7.291%;
+        &__holder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            &__leftBlock {
+                width: 50%;
+                background-color: #F00;
+                .prevBtn {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    cursor: pointer;
+                    font-family: $mainFont;
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.17;
+                    letter-spacing: 0.4px;
+                    padding: 0 13px;
+                    color: #1f2a4b;
+                    background-color: #ececec;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        background-color: #E2DFDF;
+                    }
+                    img {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            &__rightBlock {
+                width: 50%;
+                background-color: #00F;
+                .nextBtn {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    cursor: pointer;
+                    font-family: $mainFont;
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.17;
+                    letter-spacing: 0.4px;
+                    padding: 0 13px;
+                    color: #1f2a4b;
+                    background-color: #ececec;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        background-color: #E2DFDF;
+                    }
+                }
+            }
+        }
+    }
+    &__fixedBottomLeftHolder {
+        width: 32.291%;
+        position: fixed;
+        height: 36.61%;
+        overflow: hidden;
+        left: 0;
+        bottom: 0;
+        &__holder {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 65px 17.291% 0;
+            height: 100%;
+            .textBlock {
+                margin-bottom: 35px;
+                padding: 0 10%;
+                .para {
+                    font-family: $mainFont;
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: 0.3px;
+                    color: $blu;
+                }
+            }
+            .btnBlock {
+                &__link {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 30px;
+                    width: 227px;
+                    height: 39px;
+                    border-radius: 15px;
+                    background-color: #fed594;
+                    .text {
+                        font-family: $mainFont;
+                        font-size: 14px;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1;
+                        letter-spacing: 0.5px;
+                        color: $blu;
+                    }
+                }
+            }
+        }
+    }
+    &__bottomHolder {
+        width: 100%;
+        height: 36.61%;
+        padding-left: 34.375%;
+        padding-right: 7.291%;
+        padding-top: 84px;
+        &__titleHolder {
+            padding-left: 8.2083%;
+            .title {
+                font-family: $mainFont;
+                font-size: 32px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.13;
+                letter-spacing: 0.4px;
+                color: $blu;
+            }
+        }
+        &__infoHolder {
+            width: 100%;
+            padding-top: 39px;
+            padding-left: 8.2083%;
+            display: flex;
+            &__block {
+                display: flex;
+                flex-direction: column;
+                padding-right: 40px;
+                .name {
+                    font-family: $mainFont;
+                    font-size: 14px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    letter-spacing: 0.3px;
+                    color: $blu;
+                    margin-bottom: 15px;
+                }
+                .ratingHolder {
+                    display: flex;
+                    &__block {
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        width: 10px;
+                        height: 10px;
+                        margin-right: 2px;
+                    }
+                    .fullStar {
+                        background-image: url('../images/star_blue.svg');
+                    }
+                    .halfStar {
+                        background-image: url('../images/star_blue_half.svg');
+                    }
+                    .grayStar {
+                        background-image: url('../images/star_grey.svg');
+                    }
+                }
+                .info {
+                    font-family: $mainFont;
+                    font-size: 14px;
+                    font-weight: 300;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    letter-spacing: 0.3px;
+                    color: $blu;
+                }
+            }
+            
+        }
+    }
+}    
+.slick-list {
+    height: 100%;
+    .slick-track {
+        height: 100%;
+    }
+}
+
+.roomInnerMoreInfoSection {
+    width: 100%;
+    position: relative;
+    padding-top: 68px;
+    padding-left: 34.375%;
+    padding-right: 7.291%;
+    &__holder {
+        width: 100%;
+        display: flex;
+        margin-bottom: 70px;
+        &__leftBlock {
+            width: 42%;
+            padding-left: 8.2083%;
+            .title {
+                font-family: $mainFont;
+                font-size: 18px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.33;
+                letter-spacing: 0.2px;
+                color: $blu;
+                margin-bottom: 20px;
+            }
+            .para {
+                font-family: $mainFont;
+                font-size: 14px;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.43;
+                letter-spacing: 0.3px;
+                color: $blu;
+            }
+            ul {
+                li {
+                    font-family: $mainFont;
+                    font-size: 14px;
+                    font-weight: 300;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    letter-spacing: 0.3px;
+                    color: $blu;
+                    margin-bottom: 10px;
+                }
+            }
+            ul {
+                margin: 0;
+            }
+            ul.dashed {
+                list-style-type: none;
+            }
+            ul.dashed > li {
+                text-indent: 0px;
+            }
+            ul.dashed > li:before {
+                content: "-";
+                text-indent: 0px;
+            }
+        }
+        &__rightBlock {
+            width: 58%;
+            padding-left: 8.2083%;
+            .title {
+                font-family: $mainFont;
+                font-size: 18px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.33;
+                letter-spacing: 0.2px;
+                color: $blu;
+                margin-bottom: 20px;
+            }
+            .roomInfoHolder {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                &__block {
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    .icon {
+                        margin-right: 15px;
+                    }
+                    .name {
+                        font-family: $mainFont;
+                        font-size: 14px;
+                        font-weight: 300;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1;
+                        letter-spacing: 0.3px;
+                        color: $blu;
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 

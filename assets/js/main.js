@@ -16,7 +16,16 @@ $(document).ready(function() {
     const classicMiniImg = $('#classicMiniImgWrapper');
     const modernLogo = $('#modernLogo');
     const classicLogo = $('#classicLogo');
-     
+    
+    if($('.s1').hasClass('wheat')){
+        $('.header').addClass('wheat');
+        $('.logoImg').removeClass('active');
+        $(modernLogo).addClass('active');
+    } else if ($('.s1').hasClass('blu')) {
+        $('.header').addClass('blu');
+        $('.logoImg').removeClass('active');
+        $(classicLogo).addClass('active');
+    }
     
     $(modernBtn).click(function(){
         $(classicBtn).removeClass('active');
@@ -52,6 +61,17 @@ $(document).ready(function() {
         $(classicMiniImg).addClass('active');
     });
     
+    const roomInnerCarouselHolder = document.getElementById('roomInnerCarouselHolder');
+    $(roomInnerCarouselHolder).slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+//        arrows: false,
+        prevArrow: $('.prevBtn'),
+        nextArrow: $('.nextBtn'),
+        dots: true
+    });
+    
     let reviewsLastElement = document.querySelectorAll(".reviewsHolder");
     console.log(reviewsLastElement[reviewsLastElement.length -1]);
     
@@ -84,6 +104,7 @@ $(document).ready(function() {
         xhr.send();
     }
     
+    // contact form validation on submiting
     const gotellContactForm = document.getElementById('gotellContactForm');
     if (gotellContactForm) {
         gotellContactForm.addEventListener('submit', function(e){        
@@ -97,14 +118,13 @@ $(document).ready(function() {
                 console.log('fin');
             }        
         });
-    }
-    
-    
-    // form blur event listeners
-    document.getElementById('name').addEventListener('blur', validateName);
-    document.getElementById('inquiry').addEventListener('blur', validateInquiry);
-    document.getElementById('email').addEventListener('blur', validateEmail);
-    document.getElementById('phone').addEventListener('blur', validatePhone);
+            
+        // form blur event listeners
+        document.getElementById('name').addEventListener('blur', validateName);
+        document.getElementById('inquiry').addEventListener('blur', validateInquiry);
+        document.getElementById('email').addEventListener('blur', validateEmail);
+        document.getElementById('phone').addEventListener('blur', validatePhone);
+    }    
 
     function validateName(){
         const name = document.getElementById('name');
@@ -117,8 +137,7 @@ $(document).ready(function() {
            name.parentElement.classList.remove('is-invalid');
         }
         return validName;
-    }    
-
+    }  
     function validateInquiry(){
         const inquiry = document.getElementById('inquiry');
         const re = /^[a-zA-Z]{2,12}$/;
@@ -131,8 +150,6 @@ $(document).ready(function() {
         }
         return validInquiry;
     }
-
-
     function validateEmail(){
         const email = document.getElementById('email');
         const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+).([a-zA-Z]{2,5})$/;
@@ -145,7 +162,6 @@ $(document).ready(function() {
         }
         return validEmail;
     }
-
     function validatePhone(){
         const phone = document.getElementById('phone');
         const re = /^(?:\+\d{2})?\d{10}(?:,(?:\+\d{2})?\d{10})*$/;
@@ -157,6 +173,5 @@ $(document).ready(function() {
            phone.parentElement.classList.remove('is-invalid');
         }
         return validPhone;
-    }
-    
+    }    
 });

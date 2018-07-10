@@ -1,6 +1,6 @@
 <?php include 'header.php' ?>
 
-<section class="pageHolder">
+<section class="pageHolder s1 white">
     <div class="pageHolder__mainBlock">
         <div class="pageHolder__mainBlock__imgHolder">
             <div id="introImgWrapper" class="pageHolder__mainBlock__imgHolder__wrapper active">

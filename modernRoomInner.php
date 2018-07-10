@@ -1,0 +1,162 @@
+<?php include 'header.php' ?>
+
+<section class="roomInnerSection s1 wheat">
+    <div class="roomInnerSection__carouselWrapper">
+        <div id="roomInnerCarouselHolder" class="roomInnerSection__carouselWrapper__holder">
+            <div class="roomInnerSection__carouselWrapper__holder__block">
+                <img src="assets/images/03-bed-bedroom-blanket-545012.jpg" alt="">
+            </div>            
+            <div class="roomInnerSection__carouselWrapper__holder__block">
+                <img src="assets/images/03-bed-bedroom-blanket-545012.jpg" alt="">
+            </div>            
+            <div class="roomInnerSection__carouselWrapper__holder__block">
+                <img src="assets/images/03-bed-bedroom-blanket-545012.jpg" alt="">
+            </div>
+            <div class="roomInnerSection__carouselWrapper__holder__block">
+                <img src="assets/images/03-bed-bedroom-blanket-545012.jpg" alt="">
+            </div>
+            <div class="roomInnerSection__carouselWrapper__holder__block">
+                <img src="assets/images/03-bed-bedroom-blanket-545012.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="carouselNav">
+        <div class="carouselNav__holder">
+            <div class="carouselNav__holder__leftBlock">
+                <button type="button" class="prevBtn"><img src="assets/images/arrow-dark.svg"><span>Previous</span></button>
+            </div>
+            <div class="carouselNav__holder__rightBlock">
+                <button type="button" class="nextBtn"><span>Next</span><img src="assets/images/arrow-dark.svg"></button>
+            </div>
+        </div>
+    </div>
+    <div class="roomInnerSection__fixedBottomLeftHolder">
+        <div class="roomInnerSection__fixedBottomLeftHolder__holder">
+            <div class="textBlock">
+                <p class="para">Lorem ipsum dolor sit amet, per an omnes ipsum dolor sit.</p>
+            </div>
+            <div class="btnBlock">
+                <a href="" class="btnBlock__link"><span class="text">Book this room</span><img src="assets/images/arrow-dark.svg"></a>
+            </div>
+        </div>
+    </div>
+    <div class="roomInnerSection__bottomHolder">
+        <div class="roomInnerSection__bottomHolder__titleHolder">
+            <h1 class="title">Modern Single Room</h1>
+        </div>
+        <div class="roomInnerSection__bottomHolder__infoHolder">
+            <div class="roomInnerSection__bottomHolder__infoHolder__block">
+                <p class="name">Rating</p>
+                <div class="ratingHolder">
+                    <div class="ratingHolder__block fullStar"></div>
+                    <div class="ratingHolder__block fullStar"></div>
+                    <div class="ratingHolder__block fullStar"></div>
+                    <div class="ratingHolder__block fullStar"></div>
+                    <div class="ratingHolder__block halfStar"></div>
+                </div>
+            </div>
+            <div class="roomInnerSection__bottomHolder__infoHolder__block">
+                <p class="name">Reviews</p>
+                <p class="info">17</p>
+            </div>
+            <div class="roomInnerSection__bottomHolder__infoHolder__block">
+                <p class="name">Bed</p>
+                <p class="info">1 double bed</p>
+            </div>
+            <div class="roomInnerSection__bottomHolder__infoHolder__block">
+                <p class="name">Occupancy</p>
+                <p class="info">2 persons</p>
+            </div>
+            <div class="roomInnerSection__bottomHolder__infoHolder__block">
+                <p class="name">Size</p>
+                <p class="info">17-20 sq. m.</p>
+            </div>
+            <div class="roomInnerSection__bottomHolder__infoHolder__block">
+                <p class="name">Bathroom</p>
+                <p class="info">Bathtub or shower</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="roomInnerMoreInfoSection">
+    <div class="roomInnerMoreInfoSection__holder">
+        <div class="roomInnerMoreInfoSection__holder__leftBlock">
+            <h3 class="title">Room description</h3>
+            <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <div class="roomInnerMoreInfoSection__holder__rightBlock">
+            <h3 class="title">Room amenities</h3>
+            <div class="roomInfoHolder">
+                <div class="roomInfoHolder__block">
+                    <img class="icon" src="assets/images/bath-icon.svg">
+                    <p class="name">Flat screen TV</p>
+                </div>
+                <div class="roomInfoHolder__block">
+                    <img class="icon" src="assets/images/bath-icon.svg">
+                    <p class="name">Telephone</p>
+                </div>
+                <div class="roomInfoHolder__block">
+                    <img class="icon" src="assets/images/bath-icon.svg">
+                    <p class="name">Mini bar</p>
+                </div>
+                <div class="roomInfoHolder__block">
+                    <img class="icon" src="assets/images/bath-icon.svg">
+                    <p class="name">Safe</p>
+                </div>
+                <div class="roomInfoHolder__block">
+                    <img class="icon" src="assets/images/bath-icon.svg">
+                    <p class="name">Breakfast</p>
+                </div>
+                <div class="roomInfoHolder__block">
+                    <img class="icon" src="assets/images/bath-icon.svg">
+                    <p class="name">1 double bed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="roomInnerMoreInfoSection__holder">
+        <div class="roomInnerMoreInfoSection__holder__leftBlock">
+            <h3 class="title">Optional extras</h3>
+            <ul class="dashed">
+               <li>Lorem ipsum dolor sit amet, consectetur</li> 
+               <li>Lorem ipsum dolor sit amet, consectetur</li>
+               <li>Lorem ipsum dolor sit amet, consectetur</li>
+               <li>Lorem ipsum dolor sit amet, consectetur</li>
+               <li>Lorem ipsum dolor sit amet, consectetur</li>
+               <li>Lorem ipsum dolor sit amet, consectetur</li>
+               <li>Lorem ipsum dolor sit amet, consectetur</li> 
+            </ul>
+        </div>
+        <div class="roomInnerMoreInfoSection__holder__rightBlock">
+            <h3 class="title">Room services</h3>
+            <div class="roomInfoHolder">
+                <div class="roomInfoHolder__block">
+                    <img class="icon" src="assets/images/bath-icon.svg">
+                    <p class="name">Wi-fi</p>
+                </div>
+                <div class="roomInfoHolder__block">
+                    <img class="icon" src="assets/images/bath-icon.svg">
+                    <p class="name">Air conditioning</p>
+                </div>
+                <div class="roomInfoHolder__block">
+                    <img class="icon" src="assets/images/bath-icon.svg">
+                    <p class="name">Satellite television</p>
+                </div>
+                <div class="roomInfoHolder__block">
+                    <img class="icon" src="assets/images/bath-icon.svg">
+                    <p class="name">Heating</p>
+                </div>
+                <div class="roomInfoHolder__block">
+                    <img class="icon" src="assets/images/bath-icon.svg">
+                    <p class="name">Free shity coffee</p>
+                </div>
+                <div class="roomInfoHolder__block">
+                    <img class="icon" src="assets/images/bath-icon.svg">
+                    <p class="name">Hot water</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php include 'footer.php' ?>
