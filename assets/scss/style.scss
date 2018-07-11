@@ -1867,7 +1867,7 @@ body {
         }
     }
 }
-//
+// room inner classic
 .roomInnerMoreInfoSection.blu {
     .roomInnerMoreInfoSection__holder {
         &__leftBlock {
@@ -1898,6 +1898,125 @@ body {
                 &--submitBtn {
                     background-color: $blu;
                     color: #fff;
+                    &:hover {
+                        color: $blu;
+                        background-color: $wheat;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// ROOM AND SUITES
+.roomAndSuitesSection {
+    position: relative;
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 34.375%;
+    padding-right: 7.291%;
+    &__fixedBottomLeftHolder {
+        width: 32.291%;
+        position: fixed;
+        height: 36.61%;
+        overflow: hidden;
+        left: 0;
+        bottom: 0;
+        &__holder {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 65px 17.291% 0;
+            height: 100%;
+            .titleBlock {
+                margin-bottom: 50px;
+                padding: 0 10%;
+                .title {
+                    font-family: $mainFont;
+                    font-size: 32px;
+                    font-weight: 300;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.13;
+                    letter-spacing: 0.4px;
+                    color: $blu;
+                    margin-bottom: 15px;
+                }                
+                .typeTitle {
+                    font-family: $mainFont;
+                    font-size: 24px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 0.88;
+                    letter-spacing: 0.4px;
+                    color: $blu;
+                    margin-bottom: 20px;
+                }
+            }
+            .btnBlock {
+                padding: 0 10%;
+                &__link {
+                    display: flex;
+                    .text {
+                        font-family: $mainFont;
+                        font-size: 14px;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1;
+                        letter-spacing: 0.5px;
+                        color: $blu;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    &__holder {
+        width: 100%;
+        &__roomBlock {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 30px;
+            display: flex;
+            &__imgBlock {
+                width: 55%;
+                height: 100%;
+                overflow: hidden;
+                img {
+                    width: auto;
+                    height: 100%;
+                }
+            }
+            &__infoBlock {
+                width: 45%;
+                padding: 59px 30px 0;
+                .title {
+                    font-family: $mainFont;
+                    font-size: 20px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    letter-spacing: 0.2px;
+                    color: $blu;
+                    margin-bottom: 10px;
+                }
+                .rateBlock {
+                    display: flex;
+                    width: 100%;
+                }
+                .para {
+                    font-family: $mainFont;
+                    font-size: 12px;
+                    font-weight: 300;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.33;
+                    letter-spacing: 0.3px;
+                    color: $blu;
                 }
             }
         }
