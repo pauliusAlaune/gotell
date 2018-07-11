@@ -173,5 +173,32 @@ $(document).ready(function() {
            phone.parentElement.classList.remove('is-invalid');
         }
         return validPhone;
-    }    
+    }   
+    
+    const checkbox = document.getElementById('star1');
+    let isChecked = document.getElementById('star1').checked;
+    let inputlabel = document.querySelectorAll('.inputLabel');
+    $('.inputLabel').click(function(){
+        $('.inputLabel').removeClass('active');
+        $(this).addClass('active');
+        cbChange();
+        if($(this).hasClass('active')){
+            $(this).prev()[0].checked = false;
+            console.log($(this).prev()[0]);
+        }
+    });
+    
+    
+    
+    function cbChange(obj) {
+        var cbs = document.getElementsByClassName("cb");
+        for (var i = 0; i < cbs.length; i++) {
+            cbs[i].checked = false;
+        }
+
+    }
+    
+    
+
+    
 });

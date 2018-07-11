@@ -157,6 +157,132 @@
             </div>
         </div>
     </div>
+    <div class="roomInnerMoreInfoSection__reviewsHolder">
+        <div class="innerReviewsBlock">
+            <h3 class="miniTitle">Reviews</h3>
+            <div class="reviewsHolder">
+                <div class="reviewsHolder__block">
+                    <div class="reviewsHolder__block__leftBlock">
+                        <p class="name">JOHN TERRY</p>
+                        <p class="date">28/04/2017</p>
+                        <div class="ratingHolder">
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block halfStar"></div>
+                            <div class="ratingHolder__block grayStar"></div>
+                        </div>
+                    </div>
+                    <div class="reviewsHolder__block__rightBlock">
+                        <p class="title">A lovely room</p>
+                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reviewsHolder">
+                <div class="reviewsHolder__block">
+                    <div class="reviewsHolder__block__leftBlock">
+                        <p class="name">MELINDA KERRY JOHNSON</p>
+                        <p class="date">28/04/2017</p>
+                        <div class="ratingHolder">
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block halfStar"></div>
+                        </div>
+                    </div>
+                    <div class="reviewsHolder__block__rightBlock">
+                        <p class="title">Had a great stay. Will definitely come back.</p>
+                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="loadMoreHolder" class="loadMoreHolder">
+                <button id="loadMoreReviews" class="loadMore"><span class="words">Load more reviews</span><img src="assets/images/loadMore.svg"></button>
+            </div>
+        </div>
+    </div>
+    <div class="roomInnerMoreInfoSection__commentHolder">
+        <h3 class="title">Leave a comment</h3>
+        <form id="leaveCommentForm" class="roomInnerMoreInfoSection__commentHolder__formHolder">
+            <div class="inputBlock">
+                <input type="text" name="" id="" class="inputField" placeholder="Enter your name">
+                <span class="invalid-feedback">name</span>
+            </div>
+            <div class="inputBlock">
+                <input type="text" name="" id="" class="inputField" placeholder="Enter your email">
+                <span class="invalid-feedback">email</span>
+            </div>
+            <div class="inputBlock">
+                <p class="inputBlockName">Your message here</p>
+                <textarea name="commentArea" id="commentArea" class="textAreaField" rows="10"></textarea>
+                <span class="invalid-feedback">Comment is empty</span>
+            </div>
+            <div class="inputBlock">
+               <p class="inputBlockName">Rate your stay</p>
+                <div class="inputBlock__checkboxHolder">
+                    <div class="checkboxBlock">
+                        <input type="checkbox" id="star1" class="checkboxInput cb">
+                        <label for="star1" class="inputLabel"></label>
+                        <div class="ratingHolder">
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block grayStar"></div>
+                            <div class="ratingHolder__block grayStar"></div>
+                            <div class="ratingHolder__block grayStar"></div>
+                            <div class="ratingHolder__block grayStar"></div>
+                        </div>
+                    </div>
+                    <div class="checkboxBlock">
+                        <input type="checkbox" id="star2" class="checkboxInput cb">
+                        <label for="star2" class="inputLabel"></label>
+                        <div class="ratingHolder">
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block grayStar"></div>
+                            <div class="ratingHolder__block grayStar"></div>
+                            <div class="ratingHolder__block grayStar"></div>
+                        </div>
+                    </div>
+                    <div class="checkboxBlock">
+                        <input type="checkbox" id="star3" class="checkboxInput cb">
+                        <label for="star3" class="inputLabel"></label>
+                        <div class="ratingHolder">
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block grayStar"></div>
+                            <div class="ratingHolder__block grayStar"></div>
+                        </div>
+                    </div>
+                    <div class="checkboxBlock">
+                        <input type="checkbox" id="star4" class="checkboxInput cb">
+                        <label for="star4" class="inputLabel"></label>
+                        <div class="ratingHolder">
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block grayStar"></div>
+                        </div>
+                    </div>
+                    <div class="checkboxBlock">
+                        <input type="checkbox" id="star5" class="checkboxInput cb">
+                        <label for="star5" class="inputLabel"></label>
+                        <div class="ratingHolder">
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                            <div class="ratingHolder__block fullStar"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <span class="invalid-feedback">Select</span>
+            </div>
+        </form>
+    </div>
 </section>
 
 <?php include 'footer.php' ?>
