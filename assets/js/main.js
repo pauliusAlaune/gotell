@@ -104,7 +104,7 @@ $(document).ready(function() {
         xhr.send();
     }
     
-    // contact form validation on submiting
+    // contact form validation on submiting and blur
     const gotellContactForm = document.getElementById('gotellContactForm');
     if (gotellContactForm) {
         gotellContactForm.addEventListener('submit', function(e){        
@@ -124,8 +124,43 @@ $(document).ready(function() {
         document.getElementById('inquiry').addEventListener('blur', validateInquiry);
         document.getElementById('email').addEventListener('blur', validateEmail);
         document.getElementById('phone').addEventListener('blur', validatePhone);
-    }    
+    } 
+    
+    
+    // room inner leave a comment form validation on submiting and blur
+    const leaveCommentForm = document.getElementById('leaveCommentForm');
+    if(leaveCommentForm){
+        leaveCommentForm.addEventListener('submit', function(e){        
+            if( !(validateEmail()) || !(validateName()) || !(validateTextarea()) || !(checkFormCheckbox()) ){
+                validateName();
+                checkFormCheckbox()
+                validateEmail();
+                validateTextarea();
+                e.preventDefault();
+                console.log('eeee');
+            } else {
+                console.log('fin');
+            }        
+        });
+        // form blur event listeners
+        document.getElementById('name').addEventListener('blur', validateName);
+        document.getElementById('email').addEventListener('blur', validateEmail);
+        document.getElementById('textarea').addEventListener('blur', validateTextarea);
+    }
 
+    
+    function validateTextarea(){
+        const textarea = document.getElementById('textarea');
+        const re = /^[a-zA-Z]{2,12}$/;
+        let validTextarea = true;
+        if(!re.test(textarea.value)){
+            textarea.parentElement.classList.add('is-invalid');
+            validTextarea = false;
+        } else {
+           textarea.parentElement.classList.remove('is-invalid');
+        }
+        return validTextarea;
+    }
     function validateName(){
         const name = document.getElementById('name');
         const re = /^[a-zA-Z]{2,12}$/;
@@ -173,7 +208,24 @@ $(document).ready(function() {
            phone.parentElement.classList.remove('is-invalid');
         }
         return validPhone;
-    }   
+    } 
+    function checkFormCheckbox(){
+        let checked=false;
+        let element = document.getElementsByClassName("cb");
+        const checkboxHolder = document.querySelector('.checkboxHolder');
+        for(var i=0; i < element.length; i++){
+        if(element[i].checked){
+            checked = true;
+            checkboxHolder.classList.remove('is-invalid');
+        } else {
+            checked=false;
+            checkboxHolder.classList.add('is-invalid');
+        }
+
+        return checked ;
+        }
+    }
+    
     
     const checkbox = document.getElementById('star1');
     let isChecked = document.getElementById('star1').checked;
@@ -186,19 +238,14 @@ $(document).ready(function() {
             $(this).prev()[0].checked = false;
             console.log($(this).prev()[0]);
         }
-    });
+    });   
     
-    
-    
+    // only one checkbox checked
     function cbChange(obj) {
         var cbs = document.getElementsByClassName("cb");
         for (var i = 0; i < cbs.length; i++) {
             cbs[i].checked = false;
         }
-
     }
-    
-    
-
     
 });

@@ -1,22 +1,22 @@
 <?php include 'header.php' ?>
 
-<section class="roomInnerSection s1 wheat">
+<section class="roomInnerSection s1 blu">
     <div class="roomInnerSection__carouselWrapper">
         <div id="roomInnerCarouselHolder" class="roomInnerSection__carouselWrapper__holder">
             <div class="roomInnerSection__carouselWrapper__holder__block">
-                <img src="assets/images/03-bed-bedroom-blanket-545012.jpg" alt="">
+                <img src="assets/images/02-high-end-oak-button-upholstered-italian-bed-1.jpg" alt="">
             </div>            
             <div class="roomInnerSection__carouselWrapper__holder__block">
-                <img src="assets/images/03-bed-bedroom-blanket-545012.jpg" alt="">
+                <img src="assets/images/02-high-end-oak-button-upholstered-italian-bed-1.jpg" alt="">
             </div>            
             <div class="roomInnerSection__carouselWrapper__holder__block">
-                <img src="assets/images/03-bed-bedroom-blanket-545012.jpg" alt="">
+                <img src="assets/images/02-high-end-oak-button-upholstered-italian-bed-1.jpg" alt="">
             </div>
             <div class="roomInnerSection__carouselWrapper__holder__block">
-                <img src="assets/images/03-bed-bedroom-blanket-545012.jpg" alt="">
+                <img src="assets/images/02-high-end-oak-button-upholstered-italian-bed-1.jpg" alt="">
             </div>
             <div class="roomInnerSection__carouselWrapper__holder__block">
-                <img src="assets/images/03-bed-bedroom-blanket-545012.jpg" alt="">
+                <img src="assets/images/02-high-end-oak-button-upholstered-italian-bed-1.jpg" alt="">
             </div>
         </div>
     </div>
@@ -36,7 +36,7 @@
                 <p class="para">Lorem ipsum dolor sit amet, per an omnes ipsum dolor sit.</p>
             </div>
             <div class="btnBlock">
-                <a href="" class="btnBlock__link"><span class="text">Book this room</span><img src="assets/images/arrow-dark.svg"></a>
+                <a href="" class="btnBlock__link"><span class="text">Book this room</span><img src="assets/images/arrow-white.svg"></a>
             </div>
         </div>
     </div>
@@ -78,7 +78,7 @@
         </div>
     </div>
 </section>
-<section class="roomInnerMoreInfoSection">
+<section class="roomInnerMoreInfoSection blu">
     <div class="roomInnerMoreInfoSection__holder">
         <div class="roomInnerMoreInfoSection__holder__leftBlock">
             <h3 class="title">Room description</h3>

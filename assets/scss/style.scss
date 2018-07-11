@@ -1536,6 +1536,28 @@ body {
         }
     }
 } 
+// for classic room inner
+.roomInnerSection.blu {
+    .roomInnerSection__fixedBottomLeftHolder {
+        &__holder {
+            .btnBlock {
+                &__link {
+                    background-color: $blu;
+                    .text {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .roomInnerSection__bottomHolder {
+        &__titleHolder {
+            .title {
+                font-family: $classicFont;
+            }
+        }
+    }
+}
 
 
 // RATING STARS
@@ -1707,9 +1729,39 @@ body {
                 }
                 .inputField {
                     width: 100%;
+                    border: none;
+                    border-bottom: solid 1px #ececec;
+                    padding: 8px 0;
+                    font-family: $mainFont;
+                    font-size: 14px;
+                    font-weight: 300;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    letter-spacing: 0.3px;
+                    color: $blu;
+                    &:placeholder {
+                        color: $blu;
+                    }
+                    
                 }
                 .textAreaField {
                     width: 100%;
+                    border: solid 1px #ececec;
+                    padding: 12px 10px;
+                    font-family: $mainFont;
+                    font-size: 14px;
+                    font-weight: 300;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    letter-spacing: 0.3px;
+                    color: $blu;
+                    resize: none;
+                    &:placeholder {
+                        color: $blu;
+                    }
+                    
                 }
                 .inputBlockName {
                     font-family: $mainFont;
@@ -1780,6 +1832,72 @@ body {
                             }
                         }
                     }
+                }
+            }
+            .inputBlock.is-invalid {
+                .invalid-feedback {
+                    opacity: 1;
+                }
+            }
+            .submitBlock {
+                width: 100%;
+                &--submitBtn {
+                    font-family: $mainFont;
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    letter-spacing: 0.5px;
+                    text-align: center;
+                    color: $blu;
+                    width: 227px;
+                    height: 40px;
+                    border-radius: 15px;
+                    background-color: $wheat;
+                    border: none;
+                    cursor: pointer;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        color: $wheat;
+                        background-color: $blu;
+                    }
+                }
+            }
+        }
+    }
+}
+//
+.roomInnerMoreInfoSection.blu {
+    .roomInnerMoreInfoSection__holder {
+        &__leftBlock {
+            .title {
+                font-family: $classicFont;
+            }
+        }
+        &__rightBlock {
+            .title {
+                font-family: $classicFont;
+            }
+        }
+    }
+    .roomInnerMoreInfoSection__reviewsHolder {
+        .innerReviewsBlock {
+            .miniTitle {
+                font-family: $classicFont;
+                font-weight: bold;
+            }
+        }
+    }
+    .roomInnerMoreInfoSection__commentHolder {
+        .title {
+            font-family: $classicFont;
+        }
+        &__formHolder {
+            .submitBlock {
+                &--submitBtn {
+                    background-color: $blu;
+                    color: #fff;
                 }
             }
         }
