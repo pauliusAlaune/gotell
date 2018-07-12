@@ -1993,6 +1993,8 @@ body {
             &__infoBlock {
                 width: 45%;
                 padding: 59px 30px 0;
+                display: flex;
+                flex-direction: column;
                 .title {
                     font-family: $mainFont;
                     font-size: 20px;
@@ -2007,6 +2009,36 @@ body {
                 .rateBlock {
                     display: flex;
                     width: 100%;
+                    margin-bottom: 18px;
+                    .reviewsPara {
+                        font-family: $mainFont;
+                        font-size: 12px;
+                        font-weight: 300;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.17;
+                        letter-spacing: 0.3px;
+                        color: $blu;
+                        margin-right: 31px;
+                        .number {
+                            font-weight: 600;
+                        }
+                    }
+                    .ratingHolder {
+                        align-items: center;
+                        .name {
+                            font-family: $mainFont;
+                            font-size: 12px;
+                            font-weight: 300;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1.17;
+                            letter-spacing: 0.3px;
+                            color: $blu;
+                            margin-left: 10px;
+
+                        }
+                    }
                 }
                 .para {
                     font-family: $mainFont;
@@ -2017,6 +2049,28 @@ body {
                     line-height: 1.33;
                     letter-spacing: 0.3px;
                     color: $blu;
+                    margin-bottom: 25px;
+                }
+                .iconBlock {
+                    width: 100%;
+                    display: flex;
+                    img {
+                        margin-right: 15px;
+                    }
+                }
+                .btnBlock {
+                    margin-top: auto;
+                    &__link {
+                        font-family: $mainFont;
+                        font-size: 12px;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.17;
+                        letter-spacing: 0.4px;
+                        color: $blu;
+                        margin-right: 10px;
+                    }
                 }
             }
         }
