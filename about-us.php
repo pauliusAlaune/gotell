@@ -1,6 +1,6 @@
 <?php include 'header.php' ?>
 
-<section class="aboutSection s1 white">
+<section class="aboutSection s1 white" arrtName="About us">
     <div class="aboutSection__imgHolder">
         <img src="assets/images/hero-3.jpg">
     </div>

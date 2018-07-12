@@ -30,14 +30,14 @@
                     </ul>
                 </div>
                 <div class="logoBlockMob">
-                    <a href="#" class="logo">
+                    <a href="index.php" class="logo">
                         <img id="" src="assets/images/Gotell_Hotel_logo_smaller.svg">
                     </a>
                 </div>
             </div>
             <div class="bottomHolder">
                 <div class="logoBlock">
-                    <a href="#" class="logo">
+                    <a href="index.php" class="logo">
                         <img id="normal" class="logoImg active" src="assets/images/logo.svg">
                         <img id="modernLogo" class="logoImg" src="assets/images/logo_light.svg">
                         <img id="classicLogo" class="logoImg" src="assets/images/logo_dark.svg">
@@ -45,6 +45,7 @@
                 </div>
                 <div class="textBlock">
                     <p class="textPara">Gotell Hotel is conveniently situated in the very heart of Vilnius oldtown, close to the Cathedral Square. It’s perfect for both business guest and tourists alike.</p>
+                    <h3 class="title"></h3>
                 </div>
             </div>
         </div>
@@ -52,10 +53,10 @@
             <div class="navHolder">
                 <ul id="menu" class="navBlock">
                     <li class="navBlockItem active"><a href="#">Homepage</a></li>
-                    <li class="navBlockItem"><a href="#">About us</a></li>
-                    <li class="navBlockItem"><a href="#">Modern Rooms & Suites</a></li>
-                    <li class="navBlockItem"><a href="#">Classic Rooms & Suites</a></li>
-                    <li class="navBlockItem"><a href="#">Contact us</a></li>
+                    <li class="navBlockItem"><a href="about-us.php">About us</a></li>
+                    <li class="navBlockItem"><a href="modernRoomsAndSuites.php">Modern Rooms & Suites</a></li>
+                    <li class="navBlockItem"><a href="classicRoomAndSuites.php">Classic Rooms & Suites</a></li>
+                    <li class="navBlockItem"><a href="contact.php">Contact us</a></li>
                 </ul>
                 <div class="navBlock2">
                     <a class="socialLink" href="https://www.facebook.com/" target="_blank">

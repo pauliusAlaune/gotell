@@ -8,6 +8,17 @@ $(document).ready(function() {
         }
     });
     
+    if($('.s1').hasClass('home')){
+        $('.headerHolder .textBlock .textPara').addClass('active');
+    }
+    
+    if($('.s1').attr('arrtName')){
+        console.log($('.s1').attr('arrtName'));
+        let name = $('.s1').attr('arrtName');
+        $('.headerHolder .textBlock .title').addClass('active');
+        $('.headerHolder .textBlock .title').text(name);
+    }
+    
     const classicBtn = $('#classicRoomBtn');
     const modernBtn = $('#modernRoomBtn');
     const modernImg = $('#modernImgWrapper');
@@ -210,16 +221,16 @@ $(document).ready(function() {
         return validPhone;
     } 
     function checkFormCheckbox(){
-        let checked=false;
+        let checked = false;
         let element = document.getElementsByClassName("cb");
         const checkboxHolder = document.querySelector('.checkboxHolder');
         for(var i=0; i < element.length; i++){
         if(element[i].checked){
-            checked = true;
             checkboxHolder.classList.remove('is-invalid');
+            checked = true;
         } else {
-            checked=false;
             checkboxHolder.classList.add('is-invalid');
+            checked = false;
         }
 
         return checked ;
@@ -227,8 +238,8 @@ $(document).ready(function() {
     }
     
     
-    const checkbox = document.getElementById('star1');
-    let isChecked = document.getElementById('star1').checked;
+//    const checkbox = document.getElementById('star1');
+//    let isChecked = document.getElementById('star1').checked;
     let inputlabel = document.querySelectorAll('.inputLabel');
     $('.inputLabel').click(function(){
         $('.inputLabel').removeClass('active');

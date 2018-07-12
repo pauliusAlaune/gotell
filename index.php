@@ -1,6 +1,6 @@
 <?php include 'header.php' ?>
 
-<section class="pageHolder s1 white">
+<section class="pageHolder s1 home white">
     <div class="pageHolder__mainBlock">
         <div class="pageHolder__mainBlock__imgHolder">
             <div id="introImgWrapper" class="pageHolder__mainBlock__imgHolder__wrapper active">
@@ -36,7 +36,7 @@
                         <div class="modernRoomBtn--fourStars"></div>
                         <p class="modernRoomBtn--nameStyle">Modern Rooms</p>
                         <p class="modernRoomBtn--viewStylePara">View style</p>
-                        <a class="modernRoomBtn--viewStyle"><span class="modernRoomBtn--viewStyle--text">See all rooms</span><img class="modernRoomBtn--viewStyle--img" src="assets/images/long-arrow-dark.svg"></a>
+                        <a href="modernRoomsAndSuites.php" class="modernRoomBtn--viewStyle"><span class="modernRoomBtn--viewStyle--text">See all rooms</span><img class="modernRoomBtn--viewStyle--img" src="assets/images/long-arrow-dark.svg"></a>
                     </div>
                 </div>
                 <div class="pageHolder__mainBlock__chooseStyle__holder__block">
@@ -45,7 +45,7 @@
                         <div class="classicRoomBtn--fourStars"></div>
                         <p class="classicRoomBtn--nameStyle">Classic Rooms</p>
                         <p class="classicRoomBtn--viewStylePara">View style</p>
-                        <a class="classicRoomBtn--viewStyle"><span class="classicRoomBtn--viewStyle--text">See all rooms</span><img class="classicRoomBtn--viewStyle--img" src="assets/images/long-arrow-light.svg"></a>
+                        <a href="classicRoomAndSuites.php" class="classicRoomBtn--viewStyle"><span class="classicRoomBtn--viewStyle--text">See all rooms</span><img class="classicRoomBtn--viewStyle--img" src="assets/images/long-arrow-light.svg"></a>
                     </div>
                 </div>
             </div>

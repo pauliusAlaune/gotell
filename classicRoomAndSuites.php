@@ -1,27 +1,27 @@
 <?php include 'header.php' ?>
 
-<section class="roomAndSuitesSection s1 wheat">
+<section class="roomAndSuitesSection s1 blu">
     <div class="roomAndSuitesSection__fixedBottomLeftHolder">
         <div class="roomAndSuitesSection__fixedBottomLeftHolder__holder">
             <div class="titleBlock">
                 <h1 class="title">Rooms & Suites</h1>
-                <h2 class="typeTitle">Modern</h2>
+                <h2 class="typeTitle">Classic</h2>
                 <img src="assets/images/star-icons-yellow.svg" alt="">
             </div>
             <div class="btnBlock">
-                <a href="classicRoomAndSuites.php" class="btnBlock__link"><span class="text">View Classic style rooms</span><img src="assets/images/arrow-dark.svg"></a>
+                <a href="modernRoomsAndSuites.php" class="btnBlock__link"><span class="text">View Modern style rooms</span><img src="assets/images/arrow-dark.svg"></a>
             </div>
         </div>
     </div>
     <div class="roomAndSuitesSection__holder">
         <div class="roomAndSuitesSection__holder__roomBlock">
             <div class="roomAndSuitesSection__holder__roomBlock__imgBlock">
-                <a href="modernRoomInner.php">
-                    <img src="assets/images/03-bed-bedroom-blanket-545012.jpg">
+                <a href="classicRoomInner.php">
+                    <img src="assets/images/02-high-end-oak-button-upholstered-italian-bed-1.jpg">
                 </a>                
             </div>
             <div class="roomAndSuitesSection__holder__roomBlock__infoBlock">
-                <h3 class="title"><a href="modernRoomInner.php">Modern Single Room</a></h3>
+                <h3 class="title"><a href="classicRoomInner.php">Modern Single Room</a></h3>
                 <div class="rateBlock">
                     <p class="reviewsPara"><span class="number">03</span> Reviews</p>
                     <div class="ratingHolder">
@@ -42,18 +42,18 @@
                     <img src="assets/images/bath-icon.svg">
                 </div>
                 <div class="btnBlock">
-                    <a href="modernRoomInner.php" class="btnBlock__link"><span class="text">View room details</span><img src="assets/images/arrow-dark.svg"></a>
+                    <a href="classicRoomInner.php" class="btnBlock__link"><span class="text">View room details</span><img src="assets/images/arrow-dark.svg"></a>
                 </div>
             </div>
         </div>
         <div class="roomAndSuitesSection__holder__roomBlock">
             <div class="roomAndSuitesSection__holder__roomBlock__imgBlock">
-                <a href="modernRoomInner.php">
-                    <img src="assets/images/03-bed-bedroom-blanket-545012.jpg">
+                <a href="classicRoomInner.php">
+                    <img src="assets/images/02-high-end-oak-button-upholstered-italian-bed-1.jpg">
                 </a>                
             </div>
             <div class="roomAndSuitesSection__holder__roomBlock__infoBlock">
-                <h3 class="title"><a href="modernRoomInner.php">Modern Single Room</a></h3>
+                <h3 class="title"><a href="classicRoomInner.php">Modern Single Room</a></h3>
                 <div class="rateBlock">
                     <p class="reviewsPara"><span class="number">03</span> Reviews</p>
                     <div class="ratingHolder">
@@ -74,18 +74,18 @@
                     <img src="assets/images/bath-icon.svg">
                 </div>
                 <div class="btnBlock">
-                    <a href="modernRoomInner.php" class="btnBlock__link"><span class="text">View room details</span><img src="assets/images/arrow-dark.svg"></a>
+                    <a href="classicRoomInner.php" class="btnBlock__link"><span class="text">View room details</span><img src="assets/images/arrow-dark.svg"></a>
                 </div>
             </div>
         </div>
         <div class="roomAndSuitesSection__holder__roomBlock">
             <div class="roomAndSuitesSection__holder__roomBlock__imgBlock">
-                <a href="modernRoomInner.php">
-                    <img src="assets/images/03-bed-bedroom-blanket-545012.jpg">
+                <a href="classicRoomInner.php">
+                    <img src="assets/images/02-high-end-oak-button-upholstered-italian-bed-1.jpg">
                 </a>                
             </div>
             <div class="roomAndSuitesSection__holder__roomBlock__infoBlock">
-                <h3 class="title"><a href="modernRoomInner.php">Modern Single Room</a></h3>
+                <h3 class="title"><a href="classicRoomInner.php">Modern Single Room</a></h3>
                 <div class="rateBlock">
                     <p class="reviewsPara"><span class="number">03</span> Reviews</p>
                     <div class="ratingHolder">
@@ -106,7 +106,7 @@
                     <img src="assets/images/bath-icon.svg">
                 </div>
                 <div class="btnBlock">
-                    <a href="modernRoomInner.php" class="btnBlock__link"><span class="text">View room details</span><img src="assets/images/arrow-dark.svg"></a>
+                    <a href="classicRoomInner.php" class="btnBlock__link"><span class="text">View room details</span><img src="assets/images/arrow-dark.svg"></a>
                 </div>
             </div>
         </div>
