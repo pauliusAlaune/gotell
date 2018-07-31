@@ -21,7 +21,8 @@ body {
     @include responsive(767px)
     {
         height: 125px;
-        background-color: transparent;
+//        background-color: transparent;
+        background-color: #fff;
     }
     .headerHolder {
         width: 100%;
@@ -152,7 +153,7 @@ body {
                         }
                     }
                     .lang_menuListItem.active {
-                       color: #1f2a4b;
+                        color: #1f2a4b;
                         border-bottom: 1px solid #1f2a4b; 
                     }
                 }
@@ -314,6 +315,25 @@ body {
                     {
                         font-size: 18px;
                     }
+                    a {
+                        position: relative;
+                        &:hover {
+                            font-weight: 600;
+                        }
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            right: -25px;
+                            background-image: url(../images/header-star.svg);
+                            background-repeat: no-repeat;
+                            width: 18px;
+                            height: 17px;
+                            background-size: cover;
+                            transform: translateY(-50%);
+                            display: none;
+                        }
+                    }
                 }
                 .navBlockItem.active {
                     font-size: 30px;
@@ -328,6 +348,11 @@ body {
                     @include responsive(767px)
                     {
                         font-size: 18px;
+                    }
+                    a {
+                        &::after {
+                            display: block;
+                        }
                     }
                 }
                 .specialNavBlockItem {
@@ -989,11 +1014,23 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    @include responsive(1024px)
+    {
+        padding-top: 32.031%;
+    }
     &__imgHolder {
         width: 100%;
-        height: 63.399%;
+        height: 63.399vh;
         padding-left: 32.291%;
         overflow: hidden;
+        @include responsive(1024px)
+        {
+            padding-left: 0%;
+        }
+        @include responsive(767px)
+        {
+            height: 193px;
+        }
         img {
             height: 100%;
             width: 100%;;
@@ -1001,6 +1038,11 @@ body {
             {
                 height: 100%;
                 width: auto;
+            }
+            @include responsive(767px)
+            {
+                height: 100%;
+                width: 100%;
             }
         }
     }
@@ -1011,11 +1053,22 @@ body {
         &__leftBlock {
             width: 32.291%;
             position: fixed;
+            overflow: hidden;
+            height: 36.601vh;
+            @include responsive(1024px)
+            {
+                display: none;
+            }
             &--imgBlock {
                 width: 100%;
                 height: 100%;
                 img {
                     width: 100%;
+                    @include responsive(1330px)
+                    {
+                        height: 100%;
+                        width: auto;
+                    }
                 }
             }
         }
@@ -1023,6 +1076,10 @@ body {
 //            width: 67.709%;
             width: 100%;
             padding-left: 32.29%;
+            @include responsive(1024px)
+            {
+                padding-left: 0;
+            }
             &--textBlock {
                 width: 100%;
                 padding: 45px 9.375% 160px 8.333%;
@@ -1117,6 +1174,10 @@ body {
 .innerReviewsBlock {
     width: 100%;
     padding-right: 5%;
+    @include responsive(767px)
+    {
+        padding-right: 0%;
+    }
     .miniTitle {
         font-family: $mainFont;
         font-size: 24px;
@@ -1126,7 +1187,15 @@ body {
         line-height: 1;
         letter-spacing: 0.3px;
         color: #1f2a4b;
-        margin-bottom: 44px
+        margin-bottom: 44px;
+        @include responsive(767px)
+        {
+            font-size: 18px;
+            padding-left: 29px;
+            padding-right: 29px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
     }
     .reviewsHolder {
         width: 100%;
@@ -1138,9 +1207,23 @@ body {
             padding-bottom: 26px;
             border-bottom: 1px solid #ececec;
             margin-bottom: 26px;
+            @include responsive(767px)
+            {
+                flex-direction: column;
+            }
             &__leftBlock {
                 width: 20.862%;
                 padding-right: 29px;
+                @include responsive(767px)
+                {
+                    width: 100%;
+                    padding-left: 29px;
+                    padding-right: 29px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    margin-bottom: 20px;
+                }
                 .name {
                     font-family: $mainFont;
                     font-size: 14px;
@@ -1151,6 +1234,11 @@ body {
                     letter-spacing: 0.3px;
                     color: $blu;
                     margin-bottom: 17px;
+                    @include responsive(767px)
+                    {
+                        width: 30%;
+                        margin-bottom: 0px;
+                    }
                 }
                 .date {
                     font-family: $mainFont;
@@ -1162,10 +1250,21 @@ body {
                     letter-spacing: 0.3px;
                     color: $blu;
                     margin-bottom: 15px;
+                    @include responsive(767px)
+                    {
+                        width: 30%;
+                        margin-bottom: 0px;
+                    }
                 }
             }
             &__rightBlock {
                 width: 79.138%;
+                @include responsive(767px)
+                {
+                    width: 100%;
+                    padding-left: 29px;
+                    padding-right: 29px;
+                }
                 .title {
                     font-family: $mainFont;
                     font-size: 14px;
@@ -1192,12 +1291,20 @@ body {
     }
     .loadMoreHolder {
         padding: 22px 0 0 19.902%;
+        @include responsive(767px)
+        {
+            padding: 0;
+        }
         .loadMore {
             border: none;
             background-color: transparent;
             display: flex;
             align-items: center;
             cursor: pointer;
+            @include responsive(767px)
+            {
+                margin: auto;
+            }
             .words {
                 font-family: $mainFont;
                 font-size: 12px;
@@ -1218,20 +1325,42 @@ body {
     }
 }
 
+
+// CONTACT FORM PAGE
 .contactSection {
     width: 100%;
+    height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
+    @include responsive(1024px)
+    {
+        height: 100%;
+        padding-top: 32.031%;
+    }
+    @include responsive(767px)
+    {
+        padding-top: 125px;
+    }
     &__mapHolder {
         width: 100%;
         height: 63.399%;
         padding-left: 32.291%;
         overflow: hidden;
+        @include responsive(1024px)
+        {
+            order: 3;
+            padding-left: 0%;
+        }
         img {
             height: 100%;
             width: 100%;;
             @include responsive(1530px)
+            {
+                height: auto;
+                width: 100%;
+            }
+            @include responsive(1330px)
             {
                 height: 100%;
                 width: auto;
@@ -1243,20 +1372,53 @@ body {
         position: fixed;
         left: 0;
         bottom: 0;
+        overflow: hidden;
+        @include responsive(1024px)
+        {
+            order: 1;
+            position: relative;
+            width: 100%;
+        }
         img {
             width: 100%;
+            @include responsive(1330px)
+            {
+                height: 100%;
+                width: auto;
+            }            
+            @include responsive(1330px)
+            {
+                height: auto;
+                width: 100%;
+            }
         }
     }
     &__holder {
         width: 100%;
+        height: 36.601%;
         padding-left: 32.29%;
+        @include responsive(1024px)
+        {
+            order: 2;
+            padding-left: 0%;
+        }
         &__rightBlock {
             width: 100%;
             display: flex;
             justify-content: space-between;
             padding: 45px 8.3333%;
+            @include responsive(767px)
+            {
+                flex-direction: column;
+                padding: 45px 29px 20px;
+            }
             &__inner {
                 width: 30%;
+                @include responsive(767px)
+                {
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
                 .title {
                     font-family: $mainFont;
                     font-size: 18px;
@@ -1300,6 +1462,10 @@ body {
                 display: flex;
                 flex-direction: column;
                 padding: 0 16.66%;
+                @include responsive(767px)
+                {
+                    padding: 0;
+                }
                 .inputFieldBlock {
                     position: relative;
                     .inputField {
@@ -1317,6 +1483,146 @@ body {
                         border: none;
                         border-bottom: solid 1px #ececec;
                         margin-bottom: 37px;
+                        @include responsive(767px)
+                        {
+                            margin-bottom: 21px;
+                        }
+                        &:placeholder {
+                            color: $blu;
+                        }
+                    }
+                    .textareaName {
+                        font-family: $mainFont;
+                        font-size: 14px;
+                        font-weight: 300;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1;
+                        letter-spacing: 0.3px;
+                        color: $blu;
+                        margin-bottom: 8px;
+                        @include responsive(767px)
+                        {
+                            padding-top: 12px;
+                        }
+                    }
+                    .textAreaField {
+                        width: 100%;
+                        font-size: 12px;
+                        padding: 12px;
+                        font-family: $mainFont;
+                        font-weight: 300;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1;
+                        letter-spacing: 0.3px;
+                        margin-bottom: 37px;
+                        color: $blu;
+                        &:placeholder {
+                            color: $blu;
+                        }
+                    }
+                    .invalid-feedback {
+                        position: absolute;
+                        left: 0;
+                        bottom: 20px;
+                        color: #ff0033;
+                        font-size: 10px;
+                        opacity: 0;
+                        transition: all 0.5s ease;
+                    }
+                }
+                .inputFieldBlock.is-invalid {
+                    .invalid-feedback {
+                        opacity: 1;
+                    }
+                }
+                .submitBtn {
+                    width: 227px;
+                    height: 40px;
+                    border-radius: 15px;
+                    background-color: #1f2a4b;
+                    border: none;
+                    font-family: $mainFont;
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    letter-spacing: 0.5px;
+                    text-align: center;
+                    color: #ffffff;
+                    margin: 30px auto 0;
+                }
+            }
+        }
+    }
+}
+
+.contactFormSection {
+    width: 100%;
+    position: relative; 
+    &__holder {
+        width: 100%;
+        padding-left: 32.29%;
+        @include responsive(1024px)
+        {
+            padding-left: 0;
+        }
+        &__contactBlock {
+            width: 100%;
+            padding: 68px 8.3333% 160px;
+            @include responsive(767px)
+            {
+                padding: 68px 29px 70px;
+            }
+            .title {
+                font-family: $mainFont;
+                font-size: 24px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1;
+                letter-spacing: 0.3px;
+                text-align: center;
+                color: $blu;
+                margin-bottom: 40px;
+                @include responsive(767px)
+                {
+                    font-size: 18px;
+                    text-align: left;
+                }
+            }
+            &--contactForm {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 0 16.66%;
+                @include responsive(767px)
+                {
+                    padding: 0;
+                }
+                .inputFieldBlock {
+                    position: relative;
+                    .inputField {
+                        width: 100%;
+                        margin-top: 5px;
+                        font-family: $mainFont;
+                        font-size: 14px;
+                        font-weight: 300;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1;
+                        letter-spacing: 0.3px;
+                        color: $blu;
+                        padding: 8px 0;
+                        border: none;
+                        border-bottom: solid 1px #ececec;
+                        margin-bottom: 37px;
+                        @include responsive(767px)
+                        {
+                            margin-bottom: 21px;
+                        }
                         &:placeholder {
                             color: $blu;
                         }
@@ -1392,6 +1698,17 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    @include responsive(1024px)
+    {
+        padding-top: 32.031vh;
+        padding-bottom: 47px;
+        height: 100%;
+    }
+    @include responsive(767px)
+    {
+        padding-top: 125px;
+        border-bottom: solid 1px #ececec;
+    }
     &__carouselWrapper {
         width: 100%;
         height: 63.399%;
@@ -1399,9 +1716,19 @@ body {
         padding-right: 7.291%;
         overflow: hidden;
         position: relative;
+        @include responsive(1024px)
+        {
+            height: 100%;
+            padding-left: 0%;
+            padding-right: 0%;
+        }
         &__holder {
             background-color: $blu;
             height: 100%;
+            @include responsive(1024px)
+            {
+                margin-bottom: 0!important;
+            }
             &__block {
                 width: 100%;
                 height: 100%;
@@ -1416,8 +1743,20 @@ body {
                 top: 10px;
                 width: auto;
                 right: 20px;
+                @include responsive(767px)
+                {
+                    top: 0px;
+                    right: 10px;
+                }
                 li {
                     margin: 0;
+                }
+                .slick-active {
+                    button {
+                        &::before {
+                            color: #fff;
+                        }
+                    }
                 }
             }
         }
@@ -1428,13 +1767,25 @@ body {
         position: absolute;
         top: 63.399%;
         right: 7.291%;
+        @include responsive(1024px)
+        {
+            top: unset;
+            right: unset;
+            position: relative;
+            margin-left: auto;
+            width: 280px;
+        }
+        @include responsive(767px)
+        {
+            width: 100%;
+        }
         &__holder {
             width: 100%;
             height: 100%;
             display: flex;
             &__leftBlock {
                 width: 50%;
-                background-color: #F00;
+//                background-color: #F00;
                 .prevBtn {
                     width: 100%;
                     height: 100%;
@@ -1457,6 +1808,16 @@ body {
                     &:hover {
                         background-color: #E2DFDF;
                     }
+                    @include responsive(1024px)
+                    {
+                        font-size: 14px;
+                        padding: 0 20px;
+                    }
+                    @include responsive(767px)
+                    {
+                        font-size: 12px;
+                        padding: 0 50px 0 25px;
+                    }
                     img {
                         transform: rotate(180deg);
                     }
@@ -1464,7 +1825,7 @@ body {
             }
             &__rightBlock {
                 width: 50%;
-                background-color: #00F;
+//                background-color: #00F;
                 .nextBtn {
                     width: 100%;
                     height: 100%;
@@ -1487,6 +1848,16 @@ body {
                     &:hover {
                         background-color: #E2DFDF;
                     }
+                    @include responsive(1024px)
+                    {
+                        font-size: 14px;
+                        padding: 0 20px;
+                    }
+                    @include responsive(767px)
+                    {
+                        font-size: 12px;
+                        padding: 0 25px 0 70px;
+                    }
                 }
             }
         }
@@ -1498,6 +1869,22 @@ body {
         overflow: hidden;
         left: 0;
         bottom: 0;
+        @include responsive(1024px)
+        {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            left: unset;
+            bottom: unset;
+            padding-left: 47px;
+            padding-right: 47px;
+            order: 4;
+        }
+        @include responsive(767px)
+        {
+            padding-left: 29px;
+            padding-right: 29px;
+        }
         &__holder {
             width: 100%;
             display: flex;
@@ -1505,9 +1892,33 @@ body {
             flex-direction: column;
             padding: 65px 17.291% 0;
             height: 100%;
+            @include responsive(1024px)
+            {
+                flex-direction: row;
+                padding: 68px 0 0;
+                justify-content: flex-start;
+            }
+            @include responsive(767px)
+            {
+                flex-direction: column;
+                justify-content: center;
+                padding: 20px 0% 0;
+            }
             .textBlock {
                 margin-bottom: 35px;
                 padding: 0 10%;
+                @include responsive(1024px)
+                {
+                    margin-bottom: 0px;
+                    padding: 0 0;
+                    width: 40%;
+                    padding-right: 40px;
+                }
+                @include responsive(767px)
+                {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
                 .para {
                     font-family: $mainFont;
                     font-size: 14px;
@@ -1520,6 +1931,10 @@ body {
                 }
             }
             .btnBlock {
+                @include responsive(767px)
+                {
+                    width: 100%;
+                }
                 &__link {
                     display: flex;
                     justify-content: space-between;
@@ -1529,6 +1944,11 @@ body {
                     height: 39px;
                     border-radius: 15px;
                     background-color: #fed594;
+                    @include responsive(767px)
+                    {
+                        width: 100%;
+                        border-radius: 25px;
+                    }
                     .text {
                         font-family: $mainFont;
                         font-size: 14px;
@@ -1549,8 +1969,25 @@ body {
         padding-left: 34.375%;
         padding-right: 7.291%;
         padding-top: 84px;
+        @include responsive(1024px)
+        {
+            height: 100%;
+            padding-left: 47px;
+            padding-right: 47px;
+            order: 3;
+        }
+        @include responsive(767px)
+        {
+            padding-left: 29px;
+            padding-right: 29px;
+            padding-top: 30px;
+        }
         &__titleHolder {
             padding-left: 8.2083%;
+            @include responsive(1024px)
+            {
+                padding-left: 0;
+            }
             .title {
                 font-family: $mainFont;
                 font-size: 32px;
@@ -1560,6 +1997,10 @@ body {
                 line-height: 1.13;
                 letter-spacing: 0.4px;
                 color: $blu;
+                @include responsive(767px)
+                {
+                    font-size: 22px;
+                }
             }
         }
         &__infoHolder {
@@ -1567,10 +2008,28 @@ body {
             padding-top: 39px;
             padding-left: 8.2083%;
             display: flex;
+            @include responsive(1024px)
+            {
+                padding-left: 0;
+                padding-top: 50px;
+            }
+            @include responsive(767px)
+            {
+                flex-wrap: wrap;
+                padding-top: 39px;
+            }
             &__block {
                 display: flex;
                 flex-direction: column;
                 padding-right: 40px;
+                @include responsive(1024px)
+                {
+                    width: 16.6%;
+                }
+                @include responsive(767px)
+                {
+                    width: 50%;
+                }
                 .name {
                     font-family: $mainFont;
                     font-size: 14px;
@@ -1584,6 +2043,10 @@ body {
                 }
                 .ratingHolder {
                     display: flex;
+                    @include responsive(767px)
+                    {
+                        margin-bottom: 33px;
+                    }
                     &__block {
                         background-repeat: no-repeat;
                         background-position: center;
@@ -1611,6 +2074,10 @@ body {
                     line-height: 1;
                     letter-spacing: 0.3px;
                     color: $blu;
+                    @include responsive(767px)
+                    {
+                        margin-bottom: 33px;
+                    }
                 }
             }
             
@@ -1676,13 +2143,41 @@ body {
     padding-top: 68px;
     padding-left: 34.375%;
     padding-right: 7.291%;
+    @include responsive(1024px)
+    {
+        padding-left: 47px;
+        padding-right: 47px;
+    }
+    @include responsive(767px)
+    {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+    }
     &__holder {
         width: 100%;
         display: flex;
         margin-bottom: 70px;
+        @include responsive(767px)
+        {
+            flex-direction: column;
+            margin-bottom: 0px;
+            padding-left: 29px;
+            padding-right: 29px;
+        }
         &__leftBlock {
             width: 42%;
             padding-left: 8.2083%;
+            @include responsive(1024px)
+            {
+                padding-left: 0%;
+            }
+            @include responsive(767px)
+            {
+                width: 100%;
+                padding-top: 40px;
+                padding-bottom: 20px;
+            }
             .title {
                 font-family: $mainFont;
                 font-size: 18px;
@@ -1734,6 +2229,14 @@ body {
         &__rightBlock {
             width: 58%;
             padding-left: 8.2083%;
+            @include responsive(767px)
+            {
+                width: 100%;
+                padding-left: 0;
+                padding-top: 40px;
+                padding-bottom: 20px;
+                
+            }
             .title {
                 font-family: $mainFont;
                 font-size: 18px;
@@ -1754,6 +2257,10 @@ body {
                     display: flex;
                     align-items: center;
                     margin-bottom: 20px;
+                    @include responsive(767px)
+                    {
+                        width: 100%;
+                    }
                     .icon {
                         margin-right: 15px;
                     }
@@ -1775,11 +2282,25 @@ body {
         width: 100%;
         padding-left: 8.2083%;
         padding-bottom: 70px;
+        @include responsive(1024px)
+        {
+            padding-left: 0;
+            padding-top: 40px;
+        }
     }    
     &__commentHolder {
         width: 100%;
         padding-left: 8.2083%;
         padding-bottom: 150px;
+        @include responsive(1024px)
+        {
+            padding-left: 29px;
+            padding-right: 29px;
+        }
+        @include responsive(767px)
+        {
+            padding-bottom: 70px;
+        }
         .title {
             font-family: $mainFont;
             font-size: 18px;
@@ -1799,13 +2320,30 @@ body {
                 width: 50%;
                 position: relative;
                 margin-bottom: 47px;
+                @include responsive(767px)
+                {
+                    width: 100%;
+                    margin-bottom: 12px;
+                }
                 &:nth-child(odd){
                     padding-right: 15px;
+                    @include responsive(767px)
+                    {
+                        padding-right: 0px;
+                    }
                 }
                 &:nth-child(even){
                     padding-left: 15px;
+                    @include responsive(767px)
+                    {
+                        padding-left: 0px;
+                    }
                     .invalid-feedback {
                         margin-left: 15px;
+                        @include responsive(767px)
+                        {
+                            padding-left: 0px;
+                        }
                     }
                 }
                 .inputField {
@@ -1843,6 +2381,7 @@ body {
                         color: $blu;
                     }
                     
+                    
                 }
                 .inputBlockName {
                     font-family: $mainFont;
@@ -1854,6 +2393,10 @@ body {
                     letter-spacing: 0.3px;
                     color: $blu;
                     margin-bottom: 8px;
+                    @include responsive(767px)
+                    {
+                        padding-top: 18px;
+                    }
                 }
                 .invalid-feedback {
                     position: absolute;
@@ -1942,6 +2485,11 @@ body {
                     &:hover {
                         color: $wheat;
                         background-color: $blu;
+                    }
+                    @include responsive(767px)
+                    {
+                        width: 100%;
+                        border-radius: 25px;
                     }
                 }
             }
