@@ -12,6 +12,10 @@ $(document).ready(function() {
         $('.headerHolder .textBlock .textPara').addClass('active');
     }
     
+    if($(window).width() < 768 && $('.s1').hasClass('home')) {
+        $('.header').addClass('mobHome');
+    }    
+    
     if($('.s1').attr('arrtName')){
         console.log($('.s1').attr('arrtName'));
         let name = $('.s1').attr('arrtName');
@@ -27,6 +31,8 @@ $(document).ready(function() {
     const classicMiniImg = $('#classicMiniImgWrapper');
     const modernLogo = $('#modernLogo');
     const classicLogo = $('#classicLogo');
+    const defaultLogo = $('#defaultLogo');
+    const classicMobLogo = $('#whiteLogo');
     
     if($('.s1').hasClass('wheat')){
         $('.header').addClass('wheat');
@@ -36,6 +42,10 @@ $(document).ready(function() {
         $('.header').addClass('blu');
         $('.logoImg').removeClass('active');
         $(classicLogo).addClass('active');
+        if($(window).width() < 768) {
+            $(defaultLogo).removeClass('active');
+            $(classicMobLogo).addClass('active');
+        }
     }
     
     $(modernBtn).click(function(){

@@ -31,7 +31,8 @@
                 </div>
                 <div class="logoBlockMob">
                     <a href="index.php" class="logo">
-                        <img id="" src="assets/images/Gotell_Hotel_logo_smaller.svg">
+                        <img id="defaultLogo" class="mobLogoImg active" src="assets/images/Gotell_Hotel_logo_smaller.svg">
+                        <img id="whiteLogo" class="mobLogoImg" src="assets/images/Gotell_Hotel_logo_smallerWhite.svg">
                     </a>
                 </div>
             </div>

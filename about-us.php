@@ -12,6 +12,7 @@
         </div>
         <div class="aboutSection__holder__rightBlock">
             <div class="aboutSection__holder__rightBlock--textBlock">
+                <h3 class="mobPageTitle">About us</h3>
                 <h1 class="title">Gotell Hotel</h1>
                 <div class="innerTextBlock">
                     <h3 class="miniTitle">A four-star hotel with a rich history</h3>

@@ -1,5 +1,4 @@
 <?php include 'header.php' ?>
-
 <section class="contactSection s1 white" arrtName="Contact">
     <div class="contactSection__mapHolder">
         <img src="assets/images/map-2.jpg">

@@ -23,6 +23,7 @@ body {
         height: 125px;
 //        background-color: transparent;
         background-color: #fff;
+        box-shadow: 0px -5px 20px 0px rgba(0,0,0, 0.04);
     }
     .headerHolder {
         width: 100%;
@@ -160,9 +161,19 @@ body {
             }
             .logoBlockMob {
                 display: none;
+                width: 59px;
+                height: 29px;
                 @include responsive(767px)
                 {
                     display: block;
+                }
+                .logo {
+                    .mobLogoImg {
+                        display: none;
+                    }                    
+                    .mobLogoImg.active {
+                        display: block;
+                    }
                 }
             }
         }
@@ -445,6 +456,16 @@ body {
         }
     }
 }
+.header.mobHome {
+    background-color: transparent;
+    .headerHolder {
+        .topHolder {
+            .logoBlockMob {
+                display: none;
+            }
+        }
+    }
+}
 .header.wheat {
     background-color: $wheat;
     transition: background-color 0.6s ease;
@@ -518,6 +539,26 @@ body {
             flex-wrap: wrap;
             margin-top: auto;
         }
+        @include responsive(767px)
+        {
+            height: 100%;
+            margin-top: 0px;
+        }
+        .mobDecoLogoHolder {
+            position: absolute;
+            top: 15%;
+            left: 24px;
+            z-index: 1;
+            display: none;
+            @include responsive(767px)
+            {
+                display: block;
+            }
+            &--img {
+                width: 88px;
+                height: 104px;
+            }
+        }
         &__imgHolder {
             width: 100%;
             height: 81.699%;
@@ -564,7 +605,7 @@ body {
                         }
                         @include responsive(1024px)
                         {
-                            width: 100%;
+                            
                         }
                     }
                 }
@@ -589,6 +630,12 @@ body {
                 bottom: 0;
                 left: unset;
             }
+            @include responsive(767px)
+            {
+                width: 100%;
+                height: auto;
+                padding: 0 10px 25px;
+            }
             &__holder {
                 width: 100%;
                 height: 100%;
@@ -597,7 +644,16 @@ body {
                 &__block {
                     width: 100%;
                     height: 50%;
-                    background-color: rgba(255, 0, 0, 0.5);
+                    @include responsive(767px)
+                    {
+                        height: 85px;
+                        &:nth-child(odd){
+                            padding-bottom: 5px;
+                        }
+                        &:nth-child(even){
+                            padding-top: 5px;
+                        }
+                    }
                     .modernRoomBtn {
                         background-color: $lightGray;
                         height: 100%;
@@ -608,6 +664,10 @@ body {
                         position: relative;
                         transition: all 0.3s ease;
                         z-index: 10;
+                        @include responsive(767px)
+                        {
+                            display: none;
+                        }
                         &--bg {
                             background-color: $wheat;
                             z-index: 15;
@@ -628,6 +688,10 @@ body {
                             opacity: 0;
                             transform: translateY(-15px);
                             transition: all 0.4s ease 0.5s;
+                            @include responsive(767px)
+                            {
+                                display: none;
+                            }
                         }
                         &--nameStyle {
                             font-family: $mainFont;
@@ -643,6 +707,10 @@ body {
                             z-index: 20;
                             opacity: 1;
                             transition: all 0.3s ease;
+                            @include responsive(767px)
+                            {
+                                font-size: 18px;
+                            }
                         }
                         &--viewStylePara {
                             font-family: $mainFont;
@@ -693,7 +761,54 @@ body {
                             }
                         }
                     }
-                    
+                    .mobModernRoomBtn {
+                        display: none;
+                        width: 100%;
+                        height: 100%;
+                        @include responsive(767px)
+                        {
+                            display: block;
+                        }
+                        &__block {
+                            width: 100%;
+                            height: 85px;
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: column;
+                            align-items: baseline;
+                            background-color: $wheat;
+                            padding: 21px 14px;
+                            &--nameStyle {
+                                font-family: $mainFont;
+                                font-size: 18px;
+                                font-weight: 600;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: 1;
+                                letter-spacing: 0.3px;
+                                color: $blu;
+                            }
+                            &__viewStyleHolder {
+                                display: flex;
+                                align-items: center;
+                                &--text {
+                                    font-family: $mainFont;
+                                    font-size: 12px;
+                                    font-weight: normal;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    line-height: 1;
+                                    letter-spacing: 0.4px;
+                                    color: $blu;
+                                }
+                                &--img {
+                                    width: 15px;
+                                    height: 9px;
+                                    margin-left: 11px;
+                                }
+                            }
+                        }
+                    }
                     .classicRoomBtn {
                         background-color: $lightGray;
                         height: 100%;
@@ -705,6 +820,10 @@ body {
                         overflow: hidden;
                         z-index: 10;
                         transition: all 0.3s ease;
+                        @include responsive(767px)
+                        {
+                            display: none;
+                        }
                         &--bg {
                             background-color: $blu;
                             z-index: 15;
@@ -725,6 +844,10 @@ body {
                             opacity: 0;
                             transform: translateY(-15px);
                             transition: all 0.4s ease 0.5s;
+                            @include responsive(767px)
+                            {
+                                display: none;
+                            }
                         }
                         &--nameStyle {
                             font-family: $classicFont;
@@ -740,6 +863,10 @@ body {
                             margin-bottom: 15px;
                             opacity: 1;
                             transition: all 0.3s ease;
+                            @include responsive(767px)
+                            {
+                                font-size: 18px;
+                            }
                         }
                         &--viewStylePara {
                             font-family: $mainFont;
@@ -786,6 +913,54 @@ body {
                             &:hover {
                                 .classicRoomBtn--viewStyle--img {
                                     transform: translateX(10px);
+                                }
+                            }
+                        }
+                    }
+                    .mobClassicRoomBtn {
+                        display: none;
+                        width: 100%;
+                        height: 100%;
+                        @include responsive(767px)
+                        {
+                            display: block;
+                        }
+                        &__block {
+                            width: 100%;
+                            height: 85px;
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: column;
+                            align-items: baseline;
+                            background-color: $blu;
+                            padding: 21px 25px;
+                            &--nameStyle {
+                                font-family: $classicFont;
+                                font-size: 18px;
+                                font-weight: 600;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: 1;
+                                letter-spacing: 0.3px;
+                                color: $wheat;
+                            }
+                            &__viewStyleHolder {
+                                display: flex;
+                                align-items: center;
+                                &--text {
+                                    font-family: $mainFont;
+                                    font-size: 12px;
+                                    font-weight: normal;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    line-height: 1;
+                                    letter-spacing: 0.4px;
+                                    color: $wheat;
+                                }
+                                &--img {
+                                    width: 15px;
+                                    height: 9px;
+                                    margin-left: 11px;
                                 }
                             }
                         }
@@ -980,6 +1155,10 @@ body {
                 order: 2;
                 margin-top: 0;
             }
+            @include responsive(767px)
+            {
+                display: none;
+            }
             &__wrapper {
                 width: 200%;
                 height: 100%;
@@ -1026,6 +1205,7 @@ body {
         @include responsive(1024px)
         {
             padding-left: 0%;
+            height: 100%;
         }
         @include responsive(767px)
         {
@@ -1038,6 +1218,11 @@ body {
             {
                 height: 100%;
                 width: auto;
+            }
+            @include responsive(1024px)
+            {
+                height: auto;
+                width: 100%;
             }
             @include responsive(767px)
             {
@@ -1083,6 +1268,27 @@ body {
             &--textBlock {
                 width: 100%;
                 padding: 45px 9.375% 160px 8.333%;
+                @include responsive(767px)
+                {
+                    padding: 30px 0px 70px;
+                }
+                .mobPageTitle {
+                    font-family: $mainFont;
+                    font-size: 26px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.38;
+                    letter-spacing: 0.3px;
+                    color: $blu;
+                    padding: 0 29px;
+                    margin-bottom: 50px;
+                    display: none;
+                    @include responsive(767px)
+                    {
+                        display: block;
+                    }
+                }
                 .title {
                     font-family: $mainFont;
                     font-size: 32px;
@@ -1093,10 +1299,21 @@ body {
                     letter-spacing: 0.3px;
                     color: $blu;
                     margin-bottom: 50px;
+                    @include responsive(767px)
+                    {
+                        font-size: 26px;
+                        margin-bottom: 30px;
+                        padding: 0 29px;
+                    }
                 }
                 .innerTextBlock {
                     width: 100%;
                     margin-bottom: 45px;
+                    @include responsive(767px)
+                    {
+                        padding: 0 29px;
+                        margin-bottom: 30px;
+                    }
                     .miniTitle {
                         font-family: $mainFont;
                         font-size: 24px;
@@ -1107,6 +1324,10 @@ body {
                         letter-spacing: 0.3px;
                         color: $blu;
                         margin-bottom: 15px;
+                        @include responsive(767px)
+                        {
+                            font-size: 18px;
+                        }
                     }
                     .para {
                         font-family: $mainFont;
@@ -1124,6 +1345,12 @@ body {
                     width: 100%;
                     margin-top: 90px;
                     margin-bottom: 80px;
+                    @include responsive(767px)
+                    {
+                        padding: 0 29px;
+                        margin-top: 70px;
+                        margin-bottom: 70px;
+                    }
                     .miniTitle {
                         font-family: $mainFont;
                         font-size: 24px;
@@ -1134,6 +1361,10 @@ body {
                         letter-spacing: 0.3px;
                         color: $blu;
                         margin-bottom: 33px;
+                        @include responsive(767px)
+                        {
+                            font-size: 18px;
+                        }
                     }
                     .locationHolder {
                         width: 100%;
@@ -1146,6 +1377,10 @@ body {
                             display: flex;
                             align-items: center;
                             margin-bottom: 20px;
+                            @include responsive(767px)
+                            {
+                                width: 100%;
+                            }
                             &--img {
                                 margin-right: 22px;
                             }
@@ -1365,6 +1600,9 @@ body {
                 height: 100%;
                 width: auto;
             }
+        }
+        .mapOne {
+            height: 100%;
         }
     }
     &__fixedBottomLeftHolder {
@@ -2111,6 +2349,10 @@ body {
 // RATING STARS
 .ratingHolder {
     display: flex;
+    @include responsive(767px)
+    {
+        margin-bottom: 3px;
+    }
     &__block {
         background-repeat: no-repeat;
         background-position: center;
@@ -2263,6 +2505,7 @@ body {
                     }
                     .icon {
                         margin-right: 15px;
+                        max-width: 25px;
                     }
                     .name {
                         font-family: $mainFont;
@@ -2817,6 +3060,7 @@ body {
                     }
                     img {
                         margin-right: 15px;
+                        max-width: 20px;
                     }
                 }
                 .btnBlock {
