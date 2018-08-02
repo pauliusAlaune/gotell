@@ -33,35 +33,6 @@
                 <p class="para">Banko kodas 73000</p> 
             </div>
         </div>
-<!--
-        <div class="contactSection__holder__contactBlock">
-            <h3 class="title">Contact us for any inquiries</h3>
-            <form id="gotellContactForm" class="contactSection__holder__contactBlock--contactForm">
-                <div class="inputFieldBlock">
-                    <input type="text" class="inputField nameInput" name="name" id="name" placeholder="Your name">
-                    <span class="invalid-feedback">name</span>
-                </div>
-                <div class="inputFieldBlock">
-                    <input type="text" class="inputField emailInput" name="email" id="email" placeholder="Your email">
-                    <span class="invalid-feedback">email</span>
-                </div>
-                <div class="inputFieldBlock">
-                    <input type="text" class="inputField phoneInput" name="phone" id="phone" placeholder="Your phone number">
-                    <span class="invalid-feedback">phone</span>
-                </div>
-                <div class="inputFieldBlock">
-                    <input type="text" class="inputField inquiryInput" name="inquiry" id="inquiry" placeholder="Type of inquiry">
-                    <span class="invalid-feedback">inquiry</span>
-                </div>
-                <div class="inputFieldBlock">
-                    <p class="textareaName">Your message here</p>
-                    <textarea name="textArea" id="textArea" class="textAreaField" placeholder="Type of inquiry" cols="30" rows="10"></textarea>
-                    <span class="invalid-feedback">textarea</span>
-                </div>
-                <input type="submit" class="submitBtn" value="Submit" id="gotellContactFormSubmit">
-            </form>
-        </div>
--->
     </div>
 </section>
 
